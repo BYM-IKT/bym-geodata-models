@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bymlk="https://bym.oslo.no/skjema/Ledningsdatabase" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="https://bym.oslo.no/skjema/Ledningsdatabase" version="2.1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ldb="https://geodata.bymoslo.no/schema/ledningsdatabase" elementFormDefault="qualified" targetNamespace="https://geodata.bymoslo.no/schema/ledningsdatabase" version="1.0.0">
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="AndreTermineringspunkt" substitutionGroup="bymlk:Kopling" type="bymlk:AndreTermineringspunktType">
+  <element name="AndreTermineringspunkt" substitutionGroup="ldb:Kopling" type="ldb:AndreTermineringspunktType">
     <annotation>
       <documentation>Andre termineringspunkt er en samlebetegnelse for fysiske objekter eller installasjoner der BYM terminerer rør, men hvor objektet ikke modelleres som kum eller fundament. Objekttypen benyttes typisk for installasjoner tilhørende andre infrastruktureiere, særlig Sporveien.
 Eksempler kan være minuskasse, billettautomat, leskur, informasjonssøyle eller andre tekniske installasjoner hvor BYM har rør terminert inn i objektet. Objekttypen benyttes også for BYM-relaterte termineringer som røravslutning, rørforlengelse og rørovergang. 
@@ -11,35 +11,35 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
   </element>
   <complexType name="AndreTermineringspunktType">
     <complexContent>
-      <extension base="bymlk:KoplingType">
+      <extension base="ldb:KoplingType">
         <sequence>
-          <element minOccurs="0" name="kategori" type="bymlk:AndreTermineringspunktkategoriType">
+          <element minOccurs="0" name="kategori" type="ldb:AndreTermineringspunktKategoriType">
             <annotation>
               <documentation>Termineringspunkt kategori: Angir hvilken type annet termineringspunkt objektet representerer, for eksempel minuskasse, detektorsløyfe, infoskjerm eller billettautomat. Verdien velges fra kodelisten `AndreTermineringspunktType`.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_AndreTermineringspunktkategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_AndreTermineringspunktKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="senterpunkt" type="bymlk:PunktgeometriPropertyType" />
+          <element name="senterpunkt" type="ldb:PunktgeometriPropertyType" />
         </sequence>
       </extension>
     </complexContent>
   </complexType>
   <complexType name="AndreTermineringspunktPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:AndreTermineringspunkt" />
+      <element ref="ldb:AndreTermineringspunkt" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <simpleType name="AndreTermineringspunktkategoriType">
+  <simpleType name="AndreTermineringspunktKategoriType">
     <annotation>
       <documentation>Angir hvilken type termineringspunkt objektet representerer, for eksempel minuskasse, infoskjerm eller billettautomat. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:AndreTermineringspunktkategoriEnumerationType bymlk:AndreTermineringspunktkategoriOtherType" />
+    <union memberTypes="ldb:AndreTermineringspunktKategoriEnumerationType ldb:AndreTermineringspunktKategoriOtherType" />
   </simpleType>
-  <simpleType name="AndreTermineringspunktkategoriEnumerationType">
+  <simpleType name="AndreTermineringspunktKategoriEnumerationType">
     <annotation>
       <documentation>Angir hvilken type termineringspunkt objektet representerer, for eksempel minuskasse, infoskjerm eller billettautomat. Verdien velges fra kodeliste.</documentation>
     </annotation>
@@ -61,7 +61,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
           <documentation>Rør som terminerer i minuskasse montert i trikkespor</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="roeravslunting">
+      <enumeration value="roeravslutning">
         <annotation>
           <documentation>Angir hvor rør avsluttes i bakken, der røret ikke termineres i kum, fundament el..</documentation>
         </annotation>
@@ -83,20 +83,20 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
       </enumeration>
     </restriction>
   </simpleType>
-  <simpleType name="AndreTermineringspunktkategoriOtherType">
+  <simpleType name="AndreTermineringspunktKategoriOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Bom" substitutionGroup="bymlk:Fundament" type="bymlk:BomType" />
+  <element name="Bom" substitutionGroup="ldb:Fundament" type="ldb:BomType" />
   <complexType name="BomType">
     <complexContent>
-      <extension base="bymlk:FundamentType">
+      <extension base="ldb:FundamentType">
         <sequence>
-          <element name="fundamenttype" type="bymlk:BomFundamentTypeType">
+          <element name="fundamenttype" type="ldb:BomFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_BomFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_BomFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -106,7 +106,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
   </complexType>
   <complexType name="BomPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Bom" />
+      <element ref="ldb:Bom" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -115,7 +115,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
     <annotation>
       <documentation>Fundament til Bom iht. kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:BomFundamentTypeEnumerationType bymlk:BomFundamentTypeOtherType" />
+    <union memberTypes="ldb:BomFundamentTypeEnumerationType ldb:BomFundamentTypeOtherType" />
   </simpleType>
   <simpleType name="BomFundamentTypeEnumerationType">
     <annotation>
@@ -139,13 +139,40 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <simpleType name="DetektorSløyfeType">
+  <element name="Detektorsløyfe" substitutionGroup="ldb:Fundament" type="ldb:DetektorsløyfeType">
+    <annotation>
+      <documentation>Detektorsløyfe representerer sløyfer som er skjært ned i asfalt eller dekke for registrering av kjøretøy, signalanlegg eller annen trafikkteknisk funksjonalitet.</documentation>
+    </annotation>
+  </element>
+  <complexType name="DetektorsløyfeType">
+    <complexContent>
+      <extension base="ldb:FundamentType">
+        <sequence>
+          <element name="kategori" type="ldb:DetektorsløyfeKategoriType">
+            <annotation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_DetektorsløyfeKategori.gml</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DetektorsløyfePropertyType">
+    <sequence minOccurs="0">
+      <element ref="ldb:Detektorsløyfe" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
+  </complexType>
+  <simpleType name="DetektorsløyfeKategoriType">
     <annotation>
       <documentation>Angir type detektorsløyfe. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:DetektorSløyfeEnumerationType bymlk:DetektorSløyfeOtherType" />
+    <union memberTypes="ldb:DetektorsløyfeKategoriEnumerationType ldb:DetektorsløyfeKategoriOtherType" />
   </simpleType>
-  <simpleType name="DetektorSløyfeEnumerationType">
+  <simpleType name="DetektorsløyfeKategoriEnumerationType">
     <annotation>
       <documentation>Angir type detektorsløyfe. Verdien velges fra kodeliste.</documentation>
     </annotation>
@@ -155,7 +182,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
           <documentation>beskriv i infor feltet</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="sloeyfedetektor">
+      <enumeration value="bilsløyfedetektor">
         <annotation>
           <documentation>sløyfedetektor som er skjært i asfalt (feks. 1,85m x 1,85m)</documentation>
         </annotation>
@@ -177,107 +204,78 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
       </enumeration>
     </restriction>
   </simpleType>
-  <simpleType name="DetektorSløyfeOtherType">
+  <simpleType name="DetektorsløyfeKategoriOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Detektorsløyfe" substitutionGroup="bymlk:Fundament" type="bymlk:DetektorsløyfeType">
-    <annotation>
-      <documentation>Detektorsløyfe representerer sløyfer som er skjært ned i asfalt eller dekke for registrering av kjøretøy, signalanlegg eller annen trafikkteknisk funksjonalitet.</documentation>
-    </annotation>
-  </element>
-  <complexType name="DetektorsløyfeType">
-    <complexContent>
-      <extension base="bymlk:FundamentType">
-        <sequence>
-          <element name="kategori" type="bymlk:DetektorSløyfeType">
-            <annotation>
-              <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_DetektorSløyfe.gml</defaultCodeSpace>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="DetektorsløyfePropertyType">
-    <sequence minOccurs="0">
-      <element ref="bymlk:Detektorsløyfe" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
-  <element abstract="true" name="Framføringsvei" substitutionGroup="bymlk:Føringsvei" type="bymlk:FramføringsveiType">
-    <annotation>
-      <documentation>Abstrakt klasse som inneholder felles egenskaper for fysiske føringsveier som kulverter, kanaler og grøfter. Representerer objekter med fysisk rom for kabler og rør, og definerer felles attributter for dimensjon, eierskap og utstrekning. Klassen skal ikke instansieres direkte, men arves av konkrete føringsveielementer.</documentation>
-    </annotation>
-  </element>
-  <complexType abstract="true" name="FramføringsveiType">
-    <complexContent>
-      <extension base="bymlk:FøringsveiType">
-        <sequence>
-          <element name="omriss" type="bymlk:PolygongeometriPropertyType">
-            <annotation>
-              <documentation>Flategeometri som viser fysisk utstrekning av føringsveien. Brukes til kartvisning og analyser. Inkluderer posisjonskvalitet.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="ytreBredde" type="double">
-            <annotation>
-              <documentation>Total utvendig bredde på føringsveien, målt i meter. Inkluderer vegger eller ytre konstruksjoner.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="ytreHøyde" type="double">
-            <annotation>
-              <documentation>Total høyde fra bunn til topp av konstruksjonen, oppgitt i meter.</documentation>
-            </annotation>
-          </element>
-          <element name="antallRørEiesAvBYM" type="integer">
-            <annotation>
-              <documentation>Antall rør i føringsveien som eies av Bymiljøetaten. Oppgis som heltall.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="traseBane" type="bymlk:TrasePropertyType" />
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="FramføringsveiPropertyType">
-    <sequence minOccurs="0">
-      <element ref="bymlk:Framføringsvei" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
-  <element abstract="true" name="Fremfoeringslinje" substitutionGroup="bymlk:Føringsvei" type="bymlk:FremfoeringslinjeType">
+  <element abstract="true" name="Fremføringslinje" substitutionGroup="ldb:Føringsvei" type="ldb:FremføringslinjeType">
     <annotation>
       <documentation>Abstrakt klasse som inneholder felles egenskaper og relasjoner for linjeformede elementer i ledningsinfrastrukturen, som rør og trekkerør. Klassen legger til rette for felles struktur og modellering, og kan utvides med flere elementtyper som for eksempel kabler. Geometrien representerer senterlinjen til objektet i terrenget. Klassen skal ikke instansieres direkte, men arves av spesialiserte komponentklasser.</documentation>
     </annotation>
   </element>
-  <complexType abstract="true" name="FremfoeringslinjeType">
+  <complexType abstract="true" name="FremføringslinjeType">
     <complexContent>
-      <extension base="bymlk:FøringsveiType">
+      <extension base="ldb:FøringsveiType">
         <sequence>
-          <element name="linje" type="bymlk:LinjegeometriPropertyType">
+          <element name="linje" type="ldb:LinjegeometriPropertyType">
             <annotation>
-              <documentation>Geometrisk representasjon av fremføringslinjens senterlinje i terrenget. Brukes til kartvisning og nettverksanalyse, og inkluderer posisjonskvalitet.</documentation>
+              <documentation>Linje: Geometrisk representasjon av fremføringslinjens senterlinje i terrenget. Brukes til kartvisning og nettverksanalyse, og inkluderer posisjonskvalitet.</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="iframfoeringsvei" type="bymlk:FramføringsveiPropertyType" />
-          <element minOccurs="0" name="itrase" type="bymlk:TrasePropertyType" />
+          <element minOccurs="0" name="iframfoeringsvei" type="ldb:FremføringsveiPropertyType" />
         </sequence>
       </extension>
     </complexContent>
   </complexType>
-  <complexType name="FremfoeringslinjePropertyType">
+  <complexType name="FremføringslinjePropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Fremfoeringslinje" />
+      <element ref="ldb:Fremføringslinje" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element abstract="true" name="Fundament" substitutionGroup="bymlk:Kopling" type="bymlk:FundamentType">
+  <element abstract="true" name="Fremføringsvei" substitutionGroup="ldb:Føringsvei" type="ldb:FremføringsveiType">
+    <annotation>
+      <documentation>Abstrakt klasse som inneholder felles egenskaper for fysiske føringsveier som kulverter, kanaler og grøfter. Representerer objekter med fysisk rom for kabler og rør, og definerer felles attributter for dimensjon, eierskap og utstrekning. Klassen skal ikke instansieres direkte, men arves av konkrete føringsveielementer.</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="FremføringsveiType">
+    <complexContent>
+      <extension base="ldb:FøringsveiType">
+        <sequence>
+          <element name="omriss" type="ldb:PolygongeometriPropertyType">
+            <annotation>
+              <documentation>Omriss: Flategeometri som viser fysisk utstrekning av føringsveien. Brukes til kartvisning og analyser. Inkluderer posisjonskvalitet.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="ytreBredde" type="double">
+            <annotation>
+              <documentation>Ytre bredde: Total utvendig bredde på føringsveien, målt i meter. Inkluderer vegger eller ytre konstruksjoner.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="ytreHøyde" type="double">
+            <annotation>
+              <documentation>Ytre høyde: Total høyde fra bunn til topp av konstruksjonen, oppgitt i meter.</documentation>
+            </annotation>
+          </element>
+          <element name="antallRørEiesAvBYM" type="integer">
+            <annotation>
+              <documentation>Antall BYM-rør: Antall rør i føringsveien som eies av Bymiljøetaten. Oppgis som heltall.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FremføringsveiPropertyType">
+    <sequence minOccurs="0">
+      <element ref="ldb:Fremføringsvei" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
+  </complexType>
+  <element abstract="true" name="Fundament" substitutionGroup="ldb:Kopling" type="ldb:FundamentType">
     <annotation>
       <documentation>Fysisk konstruksjon som utgjør et terminering- eller monteringspunkt for ulike komponenter i infrastrukturen, som skap, lysmaster, p-automater og bommer. 
 
@@ -290,11 +288,11 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
   </element>
   <complexType abstract="true" name="FundamentType">
     <complexContent>
-      <extension base="bymlk:KoplingType">
+      <extension base="ldb:KoplingType">
         <sequence>
-          <element name="omriss" type="bymlk:PolygongeometriPropertyType">
+          <element name="omriss" type="ldb:PolygongeometriPropertyType">
             <annotation>
-              <documentation>Polygon som representerer fundament omriss og flateutbredelse i terrenget. Geometrien benyttes for korrekt visning, rotasjon og posisjonering, og inkluderer posisjonskvalitet.</documentation>
+              <documentation>Omriss: Polygon som representerer fundament omriss og flateutbredelse i terrenget. Geometrien benyttes for korrekt visning, rotasjon og posisjonering, og inkluderer posisjonskvalitet.</documentation>
             </annotation>
           </element>
         </sequence>
@@ -303,7 +301,7 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
   </complexType>
   <complexType name="FundamentPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Fundament" />
+      <element ref="ldb:Fundament" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -312,7 +310,7 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
     <annotation>
       <documentation>Angir hvor objektet er fysisk plassert i terrenget eller infrastrukturen (f.eks. vegbane, fortau eller grøntområde). Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:FysiskPlasseringEnumerationType bymlk:FysiskPlasseringOtherType" />
+    <union memberTypes="ldb:FysiskPlasseringEnumerationType ldb:FysiskPlasseringOtherType" />
   </simpleType>
   <simpleType name="FysiskPlasseringEnumerationType">
     <annotation>
@@ -337,39 +335,39 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element abstract="true" name="Føringsvei" substitutionGroup="bymlk:Nettverkskomponent" type="bymlk:FøringsveiType">
+  <element abstract="true" name="Føringsvei" substitutionGroup="ldb:Nettverkskomponent" type="ldb:FøringsveiType">
     <annotation>
       <documentation>Abstrakt klasse som fungerer som felles modellmessig overbygning for alle elementer som inngår i føringsveinettet, som traseer, trekkerør, kulverter og kanaler. Brukes til å standardisere håndtering og relasjoner mellom linje- og flateobjekter i ledningsinfrastrukturen. Klassen kobles til noder via Kopling og skal ikke instansieres direkte.</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="FøringsveiType">
     <complexContent>
-      <extension base="bymlk:NettverkskomponentType">
+      <extension base="ldb:NettverkskomponentType">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="tilNode" type="bymlk:KoplingPropertyType" />
+          <element maxOccurs="unbounded" minOccurs="0" name="tilNode" type="ldb:KoplingPropertyType" />
         </sequence>
       </extension>
     </complexContent>
   </complexType>
   <complexType name="FøringsveiPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Føringsvei" />
+      <element ref="ldb:Føringsvei" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element name="Grøft" substitutionGroup="bymlk:Framføringsvei" type="bymlk:GrøftType">
+  <element name="Grøft" substitutionGroup="ldb:Fremføringsvei" type="ldb:GrøftType">
     <annotation>
       <documentation>Åpen eller lukket grøft som fungerer som føringsvei for rør, trekkerør eller kabler i bakken. Grøften er en fysisk konstruksjon i terreng eller vei og kan etableres midlertidig eller permanent. Representerer et avgrenset område for fremføring og beskyttelse av infrastruktur.</documentation>
     </annotation>
   </element>
   <complexType name="GrøftType">
     <complexContent>
-      <extension base="bymlk:FramføringsveiType">
+      <extension base="ldb:FremføringsveiType">
         <sequence>
           <element minOccurs="0" name="antallRørEiesAvAndre" type="integer">
             <annotation>
-              <documentation>Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
+              <documentation>Antall eksterne rør: Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
             </annotation>
           </element>
         </sequence>
@@ -378,7 +376,7 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
   </complexType>
   <complexType name="GrøftPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Grøft" />
+      <element ref="ldb:Grøft" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -387,7 +385,7 @@ Geometrisk punkt som representerer topp senterpunkt av fundamentet i horisontalp
     <annotation>
       <documentation>Angir hvilken del av objektet høydeverdien refererer til (f.eks. topp, bunn eller senter). Velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:HøydereferanseEnumerationType bymlk:HøydereferanseOtherType" />
+    <union memberTypes="ldb:HøydereferanseEnumerationType ldb:HøydereferanseOtherType" />
   </simpleType>
   <simpleType name="HøydereferanseEnumerationType">
     <annotation>
@@ -451,19 +449,19 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
     <annotation>
       <documentation>Angir hvordan geometrien er etablert (innmålt, ikke innmålt eller importert) og gir informasjon om datakvalitet og opprinnelse. Velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:InnmålingsStatusEnumerationType bymlk:InnmålingsStatusOtherType" />
+    <union memberTypes="ldb:InnmålingsStatusEnumerationType ldb:InnmålingsStatusOtherType" />
   </simpleType>
   <simpleType name="InnmålingsStatusEnumerationType">
     <annotation>
       <documentation>Angir hvordan geometrien er etablert (innmålt, ikke innmålt eller importert) og gir informasjon om datakvalitet og opprinnelse. Velges fra kodeliste.</documentation>
     </annotation>
     <restriction base="string">
-      <enumeration value="ikkeInmaalt">
+      <enumeration value="ikkeInnmaalt">
         <annotation>
           <documentation>Angir at objektet ikke er innmålt i felt eller basert på kjent posisjonsgrunnlag.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="inmaalt">
+      <enumeration value="innmaalt">
         <annotation>
           <documentation>Angir at objektets geometri er resultat av en spesifikk innmåling i felt eller annen kjent metode.</documentation>
         </annotation>
@@ -480,61 +478,33 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <simpleType name="JaNeiType">
-    <annotation>
-      <documentation>Kodeliste som uttrykker binære tilstander (ja/nei), med støtte for ukjent informasjon og irrelevante tilfeller. Brukes i situasjoner der boolsk verdi ikke er tilstrekkelig, og det er behov for å skille mellom “nei”, “vet ikke” og “ikke aktuelt”.</documentation>
-    </annotation>
-    <union memberTypes="bymlk:JaNeiEnumerationType bymlk:JaNeiOtherType" />
-  </simpleType>
-  <simpleType name="JaNeiEnumerationType">
-    <annotation>
-      <documentation>Kodeliste som uttrykker binære tilstander (ja/nei), med støtte for ukjent informasjon og irrelevante tilfeller. Brukes i situasjoner der boolsk verdi ikke er tilstrekkelig, og det er behov for å skille mellom “nei”, “vet ikke” og “ikke aktuelt”.</documentation>
-    </annotation>
-    <restriction base="string">
-      <enumeration value="ja">
-        <annotation>
-          <documentation>Tilstanden gjelder / er aktiv / valgt / oppfylt</documentation>
-        </annotation>
-      </enumeration>
-      <enumeration value="nei">
-        <annotation>
-          <documentation>ilstanden gjelder ikke / er inaktiv / ikke valgt</documentation>
-        </annotation>
-      </enumeration>
-    </restriction>
-  </simpleType>
-  <simpleType name="JaNeiOtherType">
-    <restriction base="string">
-      <pattern value="other: \w{2,}" />
-    </restriction>
-  </simpleType>
-  <element name="Jordelektrode" substitutionGroup="bymlk:Kopling" type="bymlk:JordelektrodeType" />
+  <element name="Jordelektrode" substitutionGroup="ldb:Kopling" type="ldb:JordelektrodeType" />
   <complexType name="JordelektrodeType">
     <complexContent>
-      <extension base="bymlk:KoplingType">
+      <extension base="ldb:KoplingType">
         <sequence>
-          <element name="kategori" type="bymlk:JordelektrodeKategoriType">
+          <element name="kategori" type="ldb:JordelektrodeKategoriType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_JordelektrodeKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordelektrodeKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="senterpunkt" type="bymlk:PunktgeometriPropertyType" />
-          <element name="jordingsmåling" type="bymlk:JordingsmålingPropertyType" />
+          <element name="senterpunkt" type="ldb:PunktgeometriPropertyType" />
+          <element name="jordingsmåling" type="ldb:JordingsmålingPropertyType" />
         </sequence>
       </extension>
     </complexContent>
   </complexType>
   <complexType name="JordelektrodePropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Jordelektrode" />
+      <element ref="ldb:Jordelektrode" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
   <simpleType name="JordelektrodeKategoriType">
-    <union memberTypes="bymlk:JordelektrodeKategoriEnumerationType bymlk:JordelektrodeKategoriOtherType" />
+    <union memberTypes="ldb:JordelektrodeKategoriEnumerationType ldb:JordelektrodeKategoriOtherType" />
   </simpleType>
   <simpleType name="JordelektrodeKategoriEnumerationType">
     <restriction base="string">
@@ -565,7 +535,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Jordingsmåling" substitutionGroup="gml:AbstractObject" type="bymlk:JordingsmålingType" />
+  <element name="Jordingsmåling" substitutionGroup="gml:AbstractObject" type="ldb:JordingsmålingType" />
   <complexType name="JordingsmålingType">
     <sequence>
       <element name="kontrollDato" type="dateTime" />
@@ -575,27 +545,27 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
   </complexType>
   <complexType name="JordingsmålingPropertyType">
     <sequence>
-      <element ref="bymlk:Jordingsmåling" />
+      <element ref="ldb:Jordingsmåling" />
     </sequence>
   </complexType>
-  <element name="Jordleder" substitutionGroup="bymlk:Føringsvei" type="bymlk:JordlederType" />
+  <element name="Jordleder" substitutionGroup="ldb:Føringsvei" type="ldb:JordlederType" />
   <complexType name="JordlederType">
     <complexContent>
-      <extension base="bymlk:FøringsveiType">
+      <extension base="ldb:FøringsveiType">
         <sequence>
-          <element name="linje" type="bymlk:LinjegeometriPropertyType" />
-          <element name="jordlederType" type="bymlk:JordlederTypeType">
+          <element name="linje" type="ldb:LinjegeometriPropertyType" />
+          <element name="jordlederType" type="ldb:JordlederTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_JordlederType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="jordingsmåling" type="bymlk:JordingsmålingPropertyType" />
-          <element name="jordlederTverrsnitt" type="bymlk:JordlederTverrsnittType">
+          <element name="jordingsmåling" type="ldb:JordingsmålingPropertyType" />
+          <element name="jordlederTverrsnitt" type="ldb:JordlederTverrsnittType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_JordlederTverrsnitt.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederTverrsnitt.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -605,13 +575,13 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
   </complexType>
   <complexType name="JordlederPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Jordleder" />
+      <element ref="ldb:Jordleder" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
   <simpleType name="JordlederTverrsnittType">
-    <union memberTypes="bymlk:JordlederTverrsnittEnumerationType bymlk:JordlederTverrsnittOtherType" />
+    <union memberTypes="ldb:JordlederTverrsnittEnumerationType ldb:JordlederTverrsnittOtherType" />
   </simpleType>
   <simpleType name="JordlederTverrsnittEnumerationType">
     <restriction base="string">
@@ -626,7 +596,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
     </restriction>
   </simpleType>
   <simpleType name="JordlederTypeType">
-    <union memberTypes="bymlk:JordlederTypeEnumerationType bymlk:JordlederTypeOtherType" />
+    <union memberTypes="ldb:JordlederTypeEnumerationType ldb:JordlederTypeOtherType" />
   </simpleType>
   <simpleType name="JordlederTypeEnumerationType">
     <restriction base="string">
@@ -639,7 +609,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Kanal" substitutionGroup="bymlk:Framføringsvei" type="bymlk:KanalType">
+  <element name="Kanal" substitutionGroup="ldb:Fremføringsvei" type="ldb:KanalType">
     <annotation>
       <documentation>Konstruksjon som fungerer som felles føringsvei for kabler og rør, ofte i form av prefabrikkerte eller støpte elementer. Kanaler benyttes typisk for å samle flere føringer i én fysisk struktur, og etableres ofte der rør eller kabler krysser vei eller andre utsatte områder. I slike tilfeller omsluttes føringene gjerne av en betongkonstruksjon for ekstra beskyttelse og holdbarhet._x000D_
 _x000D_
@@ -648,11 +618,11 @@ Geometrien for kanal angis som en polygon som viser omrisset av den fysiske stru
   </element>
   <complexType name="KanalType">
     <complexContent>
-      <extension base="bymlk:FramføringsveiType">
+      <extension base="ldb:FremføringsveiType">
         <sequence>
           <element name="antallRørEiesAvAndre" type="integer">
             <annotation>
-              <documentation>Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
+              <documentation>Antall eksterne rør: Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
             </annotation>
           </element>
         </sequence>
@@ -661,46 +631,46 @@ Geometrien for kanal angis som en polygon som viser omrisset av den fysiske stru
   </complexType>
   <complexType name="KanalPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Kanal" />
+      <element ref="ldb:Kanal" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element abstract="true" name="Kopling" substitutionGroup="bymlk:Nettverkskomponent" type="bymlk:KoplingType">
+  <element abstract="true" name="Kopling" substitutionGroup="ldb:Nettverkskomponent" type="ldb:KoplingType">
     <annotation>
       <documentation>Abstrakt klasse som representerer et konseptuelt koblingspunkt mellom noder og føringsveier i et ledningsnettverk. Brukes som en felles modellmessig struktur for å knytte sammen objekter som kummer, fundamenter og termineringspunkt med traseer, rør og trekkerør.</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="KoplingType">
     <complexContent>
-      <extension base="bymlk:NettverkskomponentType">
+      <extension base="ldb:NettverkskomponentType">
         <sequence>
           <element name="bredde" type="double">
             <annotation>
-              <documentation>Angir objektets bredde i kart, oppgitt i millimeter (mm).
+              <documentation>Bredde: Angir objektets bredde i kart, oppgitt i millimeter (mm).
 Hvis diameter fylles ut så må bredde være 0.  
 Brukes til symbolisering.</documentation>
             </annotation>
           </element>
           <element name="lengde" type="double">
             <annotation>
-              <documentation>Angir objektets lengde i kart, oppgitt i millimeter (mm). Hvis diameter fylles ut så må lengde være 0. Brukes til skalering av symbol i lengderetning.</documentation>
+              <documentation>Lengde: Angir objektets lengde i kart, oppgitt i millimeter (mm). Hvis diameter fylles ut så må lengde være 0. Brukes til skalering av symbol i lengderetning.</documentation>
             </annotation>
           </element>
           <element name="høyde" type="double">
             <annotation>
-              <documentation>Angir objektets høyde eller dybde i kart, oppgitt i millimeter (mm).</documentation>
+              <documentation>Høyde: Angir objektets høyde eller dybde i kart, oppgitt i millimeter (mm).</documentation>
             </annotation>
           </element>
           <element name="diameter" type="double">
             <annotation>
-              <documentation>Angir diameter til sirkel, oppgitt i millimeter (mm).
+              <documentation>Diameter: Angir diameter til sirkel, oppgitt i millimeter (mm).
 Hvis bredde og lengde fylles ut, må diameter være 0.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="rotasjon" type="double">
             <annotation>
-              <documentation>Rotasjonsvinkel i kartvisning, angitt som matematisk vinkel i grader (mot klokken fra x-aksen). Brukes til å vri symbolet i kartet.</documentation>
+              <documentation>Rotasjon: Rotasjonsvinkel i kartvisning, angitt som matematisk vinkel i grader (mot klokken fra x-aksen). Brukes til å vri symbolet i kartet.</documentation>
             </annotation>
           </element>
         </sequence>
@@ -709,12 +679,12 @@ Hvis bredde og lengde fylles ut, må diameter være 0.</documentation>
   </complexType>
   <complexType name="KoplingPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Kopling" />
+      <element ref="ldb:Kopling" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element name="Kulvert" substitutionGroup="bymlk:Framføringsvei" type="bymlk:KulvertType">
+  <element name="Kulvert" substitutionGroup="ldb:Fremføringsvei" type="ldb:KulvertType">
     <annotation>
       <documentation>Kulvert er en lukket konstruksjon som fungerer som fysisk føringsvei for rør og kabler, vanligvis etablert under vei eller terreng. Den kan beskrives som en type tunnel eller liten bru som muliggjør gjennomføring av infrastruktur under hindringer. Kulverter gir beskyttelse og tilgang for drift og vedlikehold, og kan være støpt, prefabrikkert eller modulbasert. Inngår som en del av føringsveinettet i ledningsinfrastrukturen._x000D_
 _x000D_
@@ -723,11 +693,11 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
   </element>
   <complexType name="KulvertType">
     <complexContent>
-      <extension base="bymlk:FramføringsveiType">
+      <extension base="ldb:FremføringsveiType">
         <sequence>
           <element minOccurs="0" name="antallRørEiesAvAndre" type="integer">
             <annotation>
-              <documentation>Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
+              <documentation>Antall eksterne rør: Antall rør i føringsveien som eies av andre aktører enn BYM. Oppgis som heltall.</documentation>
             </annotation>
           </element>
         </sequence>
@@ -736,40 +706,63 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
   </complexType>
   <complexType name="KulvertPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Kulvert" />
+      <element ref="ldb:Kulvert" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element name="Kurvgeometri" substitutionGroup="gml:AbstractObject" type="bymlk:KurvgeometriType">
+  <element name="Kurvegeometri" substitutionGroup="gml:AbstractObject" type="ldb:KurvegeometriType">
     <annotation>
       <documentation>Datatypen brukes til å etablere en felles struktur for geometri som representeres som kurve (linje), og standardiserer krav til hvordan slike elementer skal spesifiseres i modellen.</documentation>
     </annotation>
   </element>
-  <complexType name="KurvgeometriType">
+  <complexType name="KurvegeometriType">
     <sequence>
       <element name="geometri" type="gml:CurvePropertyType">
         <annotation>
-          <documentation>Geometrisk representasjon som kurve (GM_Curve). Brukes for å modellere forløp som ikke er rette linjer, men buede eller sammensatte kurver.</documentation>
+          <documentation>Geometri: Geometrisk representasjon som kurve (GM_Curve). Brukes for å modellere forløp som ikke er rette linjer, men buede eller sammensatte kurver.</documentation>
         </annotation>
       </element>
-      <element name="posisjonskvalitet" type="bymlk:PosisjonsKvalitetPropertyType">
+      <element name="posisjonskvalitet" type="ldb:PosisjonsKvalitetPropertyType">
         <annotation>
-          <documentation>Beskriver hvordan kurvens posisjon er fastsatt, inkludert nøyaktighet, målemetode og synbarhet. Brukes for å dokumentere kvaliteten på geometrien.</documentation>
+          <documentation>Posisjonskvalitet: Beskriver hvordan kurvens posisjon er fastsatt, inkludert nøyaktighet, målemetode og synbarhet. Brukes for å dokumentere kvaliteten på geometrien.</documentation>
         </annotation>
       </element>
     </sequence>
   </complexType>
-  <complexType name="KurvgeometriPropertyType">
+  <complexType name="KurvegeometriPropertyType">
     <sequence>
-      <element ref="bymlk:Kurvgeometri" />
+      <element ref="ldb:Kurvegeometri" />
     </sequence>
+  </complexType>
+  <element name="Ladestolpe" substitutionGroup="ldb:Fundament" type="ldb:LadestolpeType" />
+  <complexType name="LadestolpeType">
+    <complexContent>
+      <extension base="ldb:FundamentType">
+        <sequence>
+          <element name="fundamenttype" type="ldb:LadestolpeFundamentTypeType">
+            <annotation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_LadestolpeFundamentType.gml</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LadestolpePropertyType">
+    <sequence minOccurs="0">
+      <element ref="ldb:Ladestolpe" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
   <simpleType name="LadestolpeFundamentTypeType">
     <annotation>
       <documentation>Fundament til ladestolper iht. kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:LadestolpeFundamentTypeEnumerationType bymlk:LadestolpeFundamentTypeOtherType" />
+    <union memberTypes="ldb:LadestolpeFundamentTypeEnumerationType ldb:LadestolpeFundamentTypeOtherType" />
   </simpleType>
   <simpleType name="LadestolpeFundamentTypeEnumerationType">
     <annotation>
@@ -793,30 +786,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Ladestolper" substitutionGroup="bymlk:Fundament" type="bymlk:LadestolperType" />
-  <complexType name="LadestolperType">
-    <complexContent>
-      <extension base="bymlk:FundamentType">
-        <sequence>
-          <element name="fundamenttype" type="bymlk:LadestolpeFundamentTypeType">
-            <annotation>
-              <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_LadestolpeFundamentType.gml</defaultCodeSpace>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="LadestolperPropertyType">
-    <sequence minOccurs="0">
-      <element ref="bymlk:Ladestolper" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
-  <element name="Linjegeometri" substitutionGroup="gml:AbstractObject" type="bymlk:LinjegeometriType">
+  <element name="Linjegeometri" substitutionGroup="gml:AbstractObject" type="ldb:LinjegeometriType">
     <annotation>
       <documentation>Datatypen brukes for å standardisere struktur og kvalitetsbeskrivelse av lineære geometriobjekter. Representerer en kurve i terrenget, som f.eks. traseer, rør eller føringslinjer.</documentation>
     </annotation>
@@ -825,28 +795,51 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
     <sequence>
       <element name="geometri" type="gml:CurvePropertyType">
         <annotation>
-          <documentation>Geometrisk representasjon av linjeobjektet (GM_Curve). Brukes for å angi senterlinjen for objekter som strekker seg mellom to eller flere punkter i terrenget.</documentation>
+          <documentation>Geometri: Geometrisk representasjon av linjeobjektet (GM_Curve). Brukes for å angi senterlinjen for objekter som strekker seg mellom to eller flere punkter i terrenget.</documentation>
         </annotation>
       </element>
-      <element name="posisjonskvalitet" type="bymlk:PosisjonsKvalitetPropertyType">
+      <element name="posisjonskvalitet" type="ldb:PosisjonsKvalitetPropertyType">
         <annotation>
-          <documentation>Gir detaljer om stedfestingskvalitet for linjegeometrien, inkludert målemetode, nøyaktighet og synbarhet. Beskriver hvor nøyaktig geometrien er målt eller estimert.</documentation>
+          <documentation>Posisjonskvalitet: Gir detaljer om stedfestingskvalitet for linjegeometrien, inkludert målemetode, nøyaktighet og synbarhet. Beskriver hvor nøyaktig geometrien er målt eller estimert.</documentation>
         </annotation>
       </element>
     </sequence>
   </complexType>
   <complexType name="LinjegeometriPropertyType">
     <sequence>
-      <element ref="bymlk:Linjegeometri" />
+      <element ref="ldb:Linjegeometri" />
     </sequence>
   </complexType>
-  <simpleType name="MastStolpeFundamenttypeType">
+  <element name="MastStolpe" substitutionGroup="ldb:Fundament" type="ldb:MastStolpeType" />
+  <complexType name="MastStolpeType">
+    <complexContent>
+      <extension base="ldb:FundamentType">
+        <sequence>
+          <element name="fundamenttype" type="ldb:MastStolpeFundamentTypeType">
+            <annotation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MastStolpeFundamentType.gml</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MastStolpePropertyType">
+    <sequence minOccurs="0">
+      <element ref="ldb:MastStolpe" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
+  </complexType>
+  <simpleType name="MastStolpeFundamentTypeType">
     <annotation>
       <documentation>Fundament til MastStolpe iht. kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:MastStolpeFundamenttypeEnumerationType bymlk:MastStolpeFundamenttypeOtherType" />
+    <union memberTypes="ldb:MastStolpeFundamentTypeEnumerationType ldb:MastStolpeFundamentTypeOtherType" />
   </simpleType>
-  <simpleType name="MastStolpeFundamenttypeEnumerationType">
+  <simpleType name="MastStolpeFundamentTypeEnumerationType">
     <annotation>
       <documentation>Fundament til MastStolpe iht. kodelisten</documentation>
     </annotation>
@@ -884,7 +877,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
           <documentation>brukes ikke mer, kun for historisk</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="betongPlasstøpt">
+      <enumeration value="betongPlasstoept">
         <annotation>
           <documentation>fundament bygd på stedet med diverse mål</documentation>
         </annotation>
@@ -933,39 +926,16 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
       </enumeration>
     </restriction>
   </simpleType>
-  <simpleType name="MastStolpeFundamenttypeOtherType">
+  <simpleType name="MastStolpeFundamentTypeOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="MastStople" substitutionGroup="bymlk:Fundament" type="bymlk:MastStopleType" />
-  <complexType name="MastStopleType">
-    <complexContent>
-      <extension base="bymlk:FundamentType">
-        <sequence>
-          <element name="fundamenttype" type="bymlk:MastStolpeFundamenttypeType">
-            <annotation>
-              <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_MastStolpeFundamenttype.gml</defaultCodeSpace>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="MastStoplePropertyType">
-    <sequence minOccurs="0">
-      <element ref="bymlk:MastStople" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
   <simpleType name="MerketypeType">
     <annotation>
       <documentation>Angir hvordan kummen er fysisk merket innvendig. Verdien «Ingen» betyr at objektet ikke er merket. Øvrige verdier beskriver type merking, for eksempel merkeplate eller maling/spraymerking. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:MerketypeEnumerationType bymlk:MerketypeOtherType" />
+    <union memberTypes="ldb:MerketypeEnumerationType ldb:MerketypeOtherType" />
   </simpleType>
   <simpleType name="MerketypeEnumerationType">
     <annotation>
@@ -1008,7 +978,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
     <annotation>
       <documentation>Metode eller instrument brukt for innmåling av horisontal posisjon (X/Y). Velges fra standardisert kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:MålemetodeEnumerationType bymlk:MålemetodeOtherType" />
+    <union memberTypes="ldb:MålemetodeEnumerationType ldb:MålemetodeOtherType" />
   </simpleType>
   <simpleType name="MålemetodeEnumerationType">
     <annotation>
@@ -1045,27 +1015,27 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
           <documentation>posisjon generert, sentralpunkt</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="gNSSFasemaalingFloatLoesning">
+      <enumeration value="GNSSFasemaalingFloatLoesning">
         <annotation>
           <documentation>posisjon  innmålt med satellittbaserte systemer for navigasjon og posisjonering med global dekning (f.eks GPS, GLONASS, GALILEO). Fasemåling float-løsning</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="gNSSFasemaalingRTK">
+      <enumeration value="GNSSFasemaalingRTK">
         <annotation>
           <documentation>posisjon innmålt med satellittbaserte systemer for navigasjon og posisjonering med global dekning (f.eks GPS, GLONASS, GALILEO).: Fasemåling RTK (realtids kinematisk måling)</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="gNSSFasemaalingStatiskMaaling">
+      <enumeration value="GNSSFasemaalingStatiskMaaling">
         <annotation>
           <documentation>posisjon  innmålt med satellittbaserte systemer for navigasjon og posisjonering med global dekning (f.eks GPS, GLONASS, GALILEO): Fasemåling statisk måling.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="gNSSKodemaalingEnkleMaalinger">
+      <enumeration value="GNSSKodemaalingEnkleMaalinger">
         <annotation>
           <documentation>posisjon  innmålt med satellittbaserte systemer for navigasjon og posisjonering med global dekning (f.eks GPS, GLONASS, GALILEO): Kodemåling, enkle målinger.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="gNSSKodemaalingRelativeMaalinger">
+      <enumeration value="GNSSKodemaalingRelativeMaalinger">
         <annotation>
           <documentation>posisjon  innmålt med satellittbaserte systemer for navigasjon og posisjonering med global dekning (f.eks GPS, GLONASS, GALILEO): Kodemåling, relative målinger.</documentation>
         </annotation>
@@ -1096,7 +1066,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
     <annotation>
       <documentation>Metode eller instrument brukt for måling av høyde (Z). Velges fra egen kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:MålemetodeHøydeEnumerationType bymlk:MålemetodeHøydeOtherType" />
+    <union memberTypes="ldb:MålemetodeHøydeEnumerationType ldb:MålemetodeHøydeOtherType" />
   </simpleType>
   <simpleType name="MålemetodeHøydeEnumerationType">
     <annotation>
@@ -1123,7 +1093,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element abstract="true" name="Nettverkskomponent" substitutionGroup="gml:AbstractFeature" type="bymlk:NettverkskomponentType">
+  <element abstract="true" name="Nettverkskomponent" substitutionGroup="gml:AbstractFeature" type="ldb:NettverkskomponentType">
     <annotation>
       <documentation>Abstrakt klasse som inneholder felles attributter for alle objekttyper i nettverksdatabasen. Representerer generell informasjon som navn, eierskap, status og identifikatorer som gjelder på tvers av nodetyper og føringsveier. Klassen skal ikke instansieres direkte, men arves av konkrete komponentklasser i modellen.</documentation>
     </annotation>
@@ -1134,23 +1104,30 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
         <sequence>
           <element minOccurs="0" name="navn" type="string">
             <annotation>
-              <documentation>Angir en formell betegnelse eller identifikator som kan brukes til å navngi objektet i henhold til standarder eller eksterne krav._x000D_
+              <documentation>Navn: Angir en formell betegnelse eller identifikator som kan brukes til å navngi objektet i henhold til standarder eller eksterne krav._x000D_
 Verdien er valgfri, men skal kun benyttes der det finnes et etablert navn eller nummer fra eksterne kilder (for eksempel prosjektdokumentasjon eller registre)._x000D_
 Attributtet er ikke ment for plassering, merknader eller annen beskrivende informasjon.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="merknad" type="string" />
-          <element name="fysiskPlassering" type="bymlk:FysiskPlasseringType">
+          <element name="fysiskPlassering" type="ldb:FysiskPlasseringType">
             <annotation>
-              <documentation>Angir hvor et objekt (feks. kum, fundament, detektor eller annet termineringspunkt) er fysisk plassert i terrenget eller infrastrukturen.</documentation>
+              <documentation>Fysisk plassering: Angir hvor et objekt (feks. kum, fundament, detektor eller annet termineringspunkt) er fysisk plassert i terrenget eller infrastrukturen.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_FysiskPlassering.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_FysiskPlassering.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="uuid" type="string">
             <annotation>
-              <documentation>Universell unik identifikator: Universell unik identifikator (GUID) for objektet. Verdien genereres automatisk og sikrer global entydighet på tvers av systemer og databaser. Brukes til å koble objekter på tvers av datasett og forvaltningssystemer, og endres ikke selv om andre egenskaper ved objektet oppdateres.</documentation>
+              <documentation>Objekt-ID: Universell unik identifikator (GUID) for objektet. Verdien genereres automatisk og sikrer global entydighet på tvers av systemer og databaser. Brukes til å koble objekter på tvers av datasett og forvaltningssystemer, og endres ikke selv om andre egenskaper ved objektet oppdateres.</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="trase" type="ldb:TrasePropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">ldb:komponenter</reversePropertyName>
+              </appinfo>
             </annotation>
           </element>
         </sequence>
@@ -1159,20 +1136,20 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
   </complexType>
   <complexType name="NettverkskomponentPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Nettverkskomponent" />
+      <element ref="ldb:Nettverkskomponent" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element name="PAutomat" substitutionGroup="bymlk:Fundament" type="bymlk:PAutomatType" />
+  <element name="PAutomat" substitutionGroup="ldb:Fundament" type="ldb:PAutomatType" />
   <complexType name="PAutomatType">
     <complexContent>
-      <extension base="bymlk:FundamentType">
+      <extension base="ldb:FundamentType">
         <sequence>
-          <element name="fundamenttype" type="bymlk:PAutomatFundamentTypeType">
+          <element name="fundamenttype" type="ldb:PAutomatFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_PAutomatFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PAutomatFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1182,7 +1159,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
   </complexType>
   <complexType name="PAutomatPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:PAutomat" />
+      <element ref="ldb:PAutomat" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1191,7 +1168,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
     <annotation>
       <documentation>Fundament til P-automat iht. kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:PAutomatFundamentTypeEnumerationType bymlk:PAutomatFundamentTypeOtherType" />
+    <union memberTypes="ldb:PAutomatFundamentTypeEnumerationType ldb:PAutomatFundamentTypeOtherType" />
   </simpleType>
   <simpleType name="PAutomatFundamentTypeEnumerationType">
     <annotation>
@@ -1215,7 +1192,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Polygongeometri" substitutionGroup="gml:AbstractObject" type="bymlk:PolygongeometriType">
+  <element name="Polygongeometri" substitutionGroup="gml:AbstractObject" type="ldb:PolygongeometriType">
     <annotation>
       <documentation>Datatypen brukes for å strukturere og beskrive krav til polygongeometri i modellen. Representerer et lukket areal (GM_Surface), som for eksempel omriss av kummer, fundamenter eller kulverter. Inkluderer beskrivelse av stedfestingskvalitet.</documentation>
     </annotation>
@@ -1224,22 +1201,22 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
     <sequence>
       <element name="geometri" type="gml:SurfacePropertyType">
         <annotation>
-          <documentation>Geometrisk representasjon av et lukket areal (GM_Surface). Brukes for å vise flatebaserte objekter som omslutter en fysisk struktur.</documentation>
+          <documentation>Geometri: Geometrisk representasjon av et lukket areal (GM_Surface). Brukes for å vise flatebaserte objekter som omslutter en fysisk struktur.</documentation>
         </annotation>
       </element>
-      <element name="posisjonskvalitet" type="bymlk:PosisjonsKvalitetPropertyType">
+      <element name="posisjonskvalitet" type="ldb:PosisjonsKvalitetPropertyType">
         <annotation>
-          <documentation>Angir stedfestingskvalitet for polygonen, inkludert målemetode, nøyaktighet og synbarhet. Brukes til å vurdere hvor presist flategeometrien er kartlagt.</documentation>
+          <documentation>Posisjonskvalitet: Angir stedfestingskvalitet for polygonen, inkludert målemetode, nøyaktighet og synbarhet. Brukes til å vurdere hvor presist flategeometrien er kartlagt.</documentation>
         </annotation>
       </element>
     </sequence>
   </complexType>
   <complexType name="PolygongeometriPropertyType">
     <sequence>
-      <element ref="bymlk:Polygongeometri" />
+      <element ref="ldb:Polygongeometri" />
     </sequence>
   </complexType>
-  <element name="PosisjonsKvalitet" substitutionGroup="gml:AbstractObject" type="bymlk:PosisjonsKvalitetType">
+  <element name="PosisjonsKvalitet" substitutionGroup="gml:AbstractObject" type="ldb:PosisjonsKvalitetType">
     <annotation>
       <documentation>Beskrivelse av kvaliteten på stedfestingen til et objekt, inkludert både horisontal og vertikal målemetode, nøyaktighet og synbarhet. Klassen brukes for å dokumentere hvordan og hvor nøyaktig geometrien er registrert, og viderefører tradisjonelle kvalitetsattributter fra SOSI-standarden._x000D_
 _x000D_
@@ -1248,57 +1225,57 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
   </element>
   <complexType name="PosisjonsKvalitetType">
     <sequence>
-      <element name="målemetode" type="bymlk:MålemetodeType">
+      <element name="målemetode" type="ldb:MålemetodeType">
         <annotation>
-          <documentation>Metode eller instrument brukt for innmåling av horisontal posisjon (X/Y). Velges fra standardisert kodeliste.</documentation>
+          <documentation>Målemetode: Metode eller instrument brukt for innmåling av horisontal posisjon (X/Y). Velges fra standardisert kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Målemetode.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Målemetode.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
       <element name="nøyaktighet" type="integer">
         <annotation>
-          <documentation>Horisontal nøyaktighet i centimeter, angitt som punktstandardavvik eller tverravvik. Brukes til å vurdere kvalitet i grunnriss (X/Y).</documentation>
+          <documentation>Nøyaktighet: Horisontal nøyaktighet i centimeter, angitt som punktstandardavvik eller tverravvik. Brukes til å vurdere kvalitet i grunnriss (X/Y).</documentation>
         </annotation>
       </element>
       <element name="nøyaktighetHøyde" type="integer">
         <annotation>
-          <documentation>Vertikal nøyaktighet i centimeter. Dokumenterer presisjon i høyde (Z).</documentation>
+          <documentation>Høydenøyaktighet: Vertikal nøyaktighet i centimeter. Dokumenterer presisjon i høyde (Z).</documentation>
         </annotation>
       </element>
-      <element name="målemetodeHøyde" type="bymlk:MålemetodeHøydeType">
+      <element name="målemetodeHøyde" type="ldb:MålemetodeHøydeType">
         <annotation>
-          <documentation>Metode eller instrument brukt for måling av høyde (Z). Velges fra egen kodeliste.</documentation>
+          <documentation>Målemetode høyde: Metode eller instrument brukt for måling av høyde (Z). Velges fra egen kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_MålemetodeHøyde.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MålemetodeHøyde.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
-      <element name="høydereferanse" type="bymlk:HøydereferanseType">
+      <element name="høydeReferanse" type="ldb:HøydereferanseType">
         <annotation>
-          <documentation>Angir hvilken del av objektet høydeverdien refererer til (f.eks. topp, bunn eller senter). Velges fra kodeliste.</documentation>
+          <documentation>Høydereferanse: Angir hvilken del av objektet høydeverdien refererer til (f.eks. topp, bunn eller senter). Velges fra kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Høydereferanse.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Høydereferanse.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
-      <element name="innmålingsstatus" type="bymlk:InnmålingsStatusType">
+      <element name="innmålingsstatus" type="ldb:InnmålingsStatusType">
         <annotation>
-          <documentation>Angir hvordan geometrien er etablert (innmålt, ikke innmålt eller importert) og gir informasjon om datakvalitet og opprinnelse. Velges fra kodeliste.</documentation>
+          <documentation>Innmålingsstatus: Angir hvordan geometrien er etablert (innmålt, ikke innmålt eller importert) og gir informasjon om datakvalitet og opprinnelse. Velges fra kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_InnmålingsStatus.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_InnmålingsStatus.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
       <element name="innmålingsdato" type="date">
         <annotation>
-          <documentation>Dato for innmåling eller registrering av geometri. Brukes til å vurdere datagrunnlagets aktualitet og kvalitet.</documentation>
+          <documentation>Innmålingsdato: Dato for innmåling eller registrering av geometri. Brukes til å vurdere datagrunnlagets aktualitet og kvalitet.</documentation>
         </annotation>
       </element>
-      <element name="synbarhet" type="bymlk:SynbarhetType">
+      <element name="synbarhet" type="ldb:SynbarhetType">
         <annotation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Synbarhet.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Synbarhet.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1306,18 +1283,18 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
   </complexType>
   <complexType name="PosisjonsKvalitetPropertyType">
     <sequence>
-      <element ref="bymlk:PosisjonsKvalitet" />
+      <element ref="ldb:PosisjonsKvalitet" />
     </sequence>
   </complexType>
-  <element name="Pullerter" substitutionGroup="bymlk:Fundament" type="bymlk:PullerterType" />
-  <complexType name="PullerterType">
+  <element name="Pullert" substitutionGroup="ldb:Fundament" type="ldb:PullertType" />
+  <complexType name="PullertType">
     <complexContent>
-      <extension base="bymlk:FundamentType">
+      <extension base="ldb:FundamentType">
         <sequence>
-          <element name="fundamenttype" type="bymlk:PullerterHevSenkFundamentTypeType">
+          <element name="fundamenttype" type="ldb:PullerterHevSenkFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_PullerterHevSenkFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PullerterHevSenkFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1325,9 +1302,9 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
       </extension>
     </complexContent>
   </complexType>
-  <complexType name="PullerterPropertyType">
+  <complexType name="PullertPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Pullerter" />
+      <element ref="ldb:Pullert" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1336,7 +1313,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
     <annotation>
       <documentation>Fundament til hev/senk pullert iht. kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:PullerterHevSenkFundamentTypeEnumerationType bymlk:PullerterHevSenkFundamentTypeOtherType" />
+    <union memberTypes="ldb:PullerterHevSenkFundamentTypeEnumerationType ldb:PullerterHevSenkFundamentTypeOtherType" />
   </simpleType>
   <simpleType name="PullerterHevSenkFundamentTypeEnumerationType">
     <annotation>
@@ -1360,7 +1337,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Punktgeometri" substitutionGroup="gml:AbstractObject" type="bymlk:PunktgeometriType">
+  <element name="Punktgeometri" substitutionGroup="gml:AbstractObject" type="ldb:PunktgeometriType">
     <annotation>
       <documentation>Datatypen brukes til å etablere en felles struktur for punktgeometri og sikre standardisert beskrivelse av posisjonerte objekter i modellen. _x000D_
 _x000D_
@@ -1371,37 +1348,37 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
     <sequence>
       <element name="geometri" type="gml:PointPropertyType">
         <annotation>
-          <documentation>Koordinatposisjon som representerer geometrisk plassering av objektet i terrenget.</documentation>
+          <documentation>Geometri: Koordinatposisjon som representerer geometrisk plassering av objektet i terrenget.</documentation>
         </annotation>
       </element>
-      <element name="posisjonskvalitet" type="bymlk:PosisjonsKvalitetPropertyType">
+      <element name="posisjonskvalitet" type="ldb:PosisjonsKvalitetPropertyType">
         <annotation>
-          <documentation>Gir informasjon om kvalitet og metode for hvordan punktets posisjon er bestemt, inkludert nøyaktighet, målemetode og synbarhet.</documentation>
+          <documentation>Posisjonskvalitet: Gir informasjon om kvalitet og metode for hvordan punktets posisjon er bestemt, inkludert nøyaktighet, målemetode og synbarhet.</documentation>
         </annotation>
       </element>
     </sequence>
   </complexType>
   <complexType name="PunktgeometriPropertyType">
     <sequence>
-      <element ref="bymlk:Punktgeometri" />
+      <element ref="ldb:Punktgeometri" />
     </sequence>
   </complexType>
-  <element name="Skap" substitutionGroup="bymlk:Fundament" type="bymlk:SkapType" />
+  <element name="Skap" substitutionGroup="ldb:Fundament" type="ldb:SkapType" />
   <complexType name="SkapType">
     <complexContent>
-      <extension base="bymlk:FundamentType">
+      <extension base="ldb:FundamentType">
         <sequence>
-          <element name="fundamenttype" type="bymlk:SkapfundamenttypeType">
+          <element name="fundamenttype" type="ldb:SkapFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Skapfundamenttype.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="kategori" type="bymlk:SkapfundamentkategoriType">
+          <element name="kategori" type="ldb:SkapFundamentKategoriType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Skapfundamentkategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1411,15 +1388,15 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
   </complexType>
   <complexType name="SkapPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Skap" />
+      <element ref="ldb:Skap" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <simpleType name="SkapfundamentkategoriType">
-    <union memberTypes="bymlk:SkapfundamentkategoriEnumerationType bymlk:SkapfundamentkategoriOtherType" />
+  <simpleType name="SkapFundamentKategoriType">
+    <union memberTypes="ldb:SkapFundamentKategoriEnumerationType ldb:SkapFundamentKategoriOtherType" />
   </simpleType>
-  <simpleType name="SkapfundamentkategoriEnumerationType">
+  <simpleType name="SkapFundamentKategoriEnumerationType">
     <restriction base="string">
       <enumeration value="annet">
         <annotation>
@@ -1453,19 +1430,19 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
       </enumeration>
     </restriction>
   </simpleType>
-  <simpleType name="SkapfundamentkategoriOtherType">
+  <simpleType name="SkapFundamentKategoriOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <simpleType name="SkapfundamenttypeType">
+  <simpleType name="SkapFundamentTypeType">
     <annotation>
       <documentation>Fundamenter til diverse skaptyper iht
  kodelisten</documentation>
     </annotation>
-    <union memberTypes="bymlk:SkapfundamenttypeEnumerationType bymlk:SkapfundamenttypeOtherType" />
+    <union memberTypes="ldb:SkapFundamentTypeEnumerationType ldb:SkapFundamentTypeOtherType" />
   </simpleType>
-  <simpleType name="SkapfundamenttypeEnumerationType">
+  <simpleType name="SkapFundamentTypeEnumerationType">
     <annotation>
       <documentation>Fundamenter til diverse skaptyper iht
  kodelisten</documentation>
@@ -1476,13 +1453,13 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
       <enumeration value="betongPrefabrikert" />
     </restriction>
   </simpleType>
-  <simpleType name="SkapfundamenttypeOtherType">
+  <simpleType name="SkapFundamentTypeOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
   <simpleType name="SynbarhetType">
-    <union memberTypes="bymlk:SynbarhetEnumerationType bymlk:SynbarhetOtherType" />
+    <union memberTypes="ldb:SynbarhetEnumerationType ldb:SynbarhetOtherType" />
   </simpleType>
   <simpleType name="SynbarhetEnumerationType">
     <restriction base="string">
@@ -1513,7 +1490,7 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Trase" substitutionGroup="bymlk:Føringsvei" type="bymlk:TraseType">
+  <element name="Trase" substitutionGroup="gml:AbstractFeature" type="ldb:TraseType">
     <annotation>
       <documentation>Trasè representerer en senterlinje for én eller flere trekkerør mellom to termineringspunkter. Alle rør innenfor samme trasè skal ha felles start- og endepunkt. 
 Dersom flere rør ligger i samme grøft eller kanal, men terminerer i ulike endepunkter, skal disse registreres som separate traseer. Det kan derfor forekomme flere parallelle traseer innenfor samme grøft eller kanal.
@@ -1522,21 +1499,41 @@ Trasèen registreres som en linjegeometri langs senter av grøft eller kanal, ua
   </element>
   <complexType name="TraseType">
     <complexContent>
-      <extension base="bymlk:FøringsveiType">
+      <extension base="gml:AbstractFeatureType">
         <sequence>
-          <element name="linje" type="bymlk:LinjegeometriPropertyType">
+          <element name="linje" type="ldb:LinjegeometriPropertyType">
             <annotation>
-              <documentation>Linje som representerer senterlinje for trase mellom felles start- og endepunkt. Inkluderer posisjonskvalitet.</documentation>
+              <documentation>Linje: Linje som representerer senterlinje for trase mellom felles start- og endepunkt. Inkluderer posisjonskvalitet.</documentation>
             </annotation>
           </element>
           <element name="antallRørEiesAvBYM" type="integer">
             <annotation>
-              <documentation>Antall rør eller trekkerør i traseen som eies av Bymiljøetaten. Oppgis som heltall.</documentation>
+              <documentation>Antall BYM-rør: Antall rør eller trekkerør i traseen som eies av Bymiljøetaten. Oppgis som heltall.</documentation>
             </annotation>
           </element>
           <element name="antallRørEiesAvAndre" type="integer">
             <annotation>
-              <documentation>Antall rør som eies av andre aktører i traseen. Oppgis som heltall.</documentation>
+              <documentation>Antall eksterne rør: Antall rør som eies av andre aktører i traseen. Oppgis som heltall.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="merknad" type="string" />
+          <element minOccurs="0" name="navn" type="string">
+            <annotation>
+              <documentation>Navn: Angir en formell betegnelse eller identifikator som kan brukes til å navngi objektet i henhold til standarder eller eksterne krav._x000D_
+Verdien er valgfri, men skal kun benyttes der det finnes et etablert navn eller nummer fra eksterne kilder (for eksempel prosjektdokumentasjon eller registre)._x000D_
+Attributtet er ikke ment for plassering, merknader eller annen beskrivende informasjon.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="uuid" type="string">
+            <annotation>
+              <documentation>Objekt-ID: Universell unik identifikator (GUID) for objektet. Verdien genereres automatisk og sikrer global entydighet på tvers av systemer og databaser. Brukes til å koble objekter på tvers av datasett og forvaltningssystemer, og endres ikke selv om andre egenskaper ved objektet oppdateres.</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="komponenter" type="ldb:NettverkskomponentPropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">ldb:trase</reversePropertyName>
+              </appinfo>
             </annotation>
           </element>
         </sequence>
@@ -1545,49 +1542,49 @@ Trasèen registreres som en linjegeometri langs senter av grøft eller kanal, ua
   </complexType>
   <complexType name="TrasePropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Trase" />
+      <element ref="ldb:Trase" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <element name="Trekkekum" substitutionGroup="bymlk:Kopling" type="bymlk:TrekkekumType">
+  <element name="Trekkekum" substitutionGroup="ldb:Kopling" type="ldb:TrekkekumType">
     <annotation>
       <documentation>Et fysisk objekt, vanligvis laget av stål, plast eller betong, som er gravd ned i bakken for å skape et lukket rom. Inne i kummen finnes koplinger, koblingspunkter eller skjøter hvor ledninger, kabler eller rør fra et nettverk er tilkoblet. Kummen gir tilgang til disse forbindelsene for inspeksjon, vedlikehold og reparasjon uten behov for å grave opp bakken. Kummen registreres med polygongeometri som representerer kummens omriss og utstrekning i terrenget. Høyde refereres til bunn innvendig kum. For runde kummer registreres omriss basert på bunn kum, og diameter oppgis som egen verdi.</documentation>
     </annotation>
   </element>
   <complexType name="TrekkekumType">
     <complexContent>
-      <extension base="bymlk:KoplingType">
+      <extension base="ldb:KoplingType">
         <sequence>
-          <element name="kategori" type="bymlk:TrekkekumKategoriType">
+          <element name="omriss" type="ldb:PolygongeometriPropertyType">
             <annotation>
-              <documentation>Trekkekum kategori: Angir kummens form, for eksempel rund, kvadratisk eller Ågekorskum. Verdien velges fra kodelisten TrekkekumKategori.</documentation>
+              <documentation>Omriss: Polygon som representerer kummens omriss bunn kum. Geometrien benyttes for korrekt visning, rotasjon og posisjonering, og inkluderer posisjonskvalitet.</documentation>
+            </annotation>
+          </element>
+          <element name="trekkekumform" type="ldb:TrekkekumFormType">
+            <annotation>
+              <documentation>Kumform: Angir kummens form, for eksempel rund, kvadratisk eller Ågekorskum. Verdien velges fra kodelisten TrekkekumFrom.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_TrekkekumKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumForm.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="omriss" type="bymlk:PolygongeometriPropertyType">
+          <element name="merking" type="ldb:MerketypeType">
             <annotation>
-              <documentation>Polygon som representerer kummens omriss bunn kum. Geometrien benyttes for korrekt visning, rotasjon og posisjonering, og inkluderer posisjonskvalitet.</documentation>
-            </annotation>
-          </element>
-          <element name="merking" type="bymlk:MerketypeType">
-            <annotation>
-              <documentation>Angir hvordan kummen er fysisk merket innvendig. Verdien «Ingen» betyr at objektet ikke er merket. Øvrige verdier beskriver type merking, for eksempel merkeplate eller maling/spraymerking. Verdien velges fra kodeliste.</documentation>
+              <documentation>Merking: Angir hvordan kummen er fysisk merket innvendig. Verdien «Ingen» betyr at objektet ikke er merket. Øvrige verdier beskriver type merking, for eksempel merkeplate eller maling/spraymerking. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Merketype.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
           <element name="antallRørEiesAvBYM" type="integer">
             <annotation>
-              <documentation>Angir antall rør i kummen som eies av Bymiljøetaten. Oppgis som heltall. Dersom kummen inneholder oransje rør, regnes kummen som eid av BYM selv om andre aktører også har rør terminert i kummen.</documentation>
+              <documentation>Antall BYM-rør: Angir antall rør i kummen som eies av Bymiljøetaten. Oppgis som heltall. Dersom kummen inneholder oransje rør, regnes kummen som eid av BYM selv om andre aktører også har rør terminert i kummen.</documentation>
             </annotation>
           </element>
           <element name="antallRørEiesAvAndre" type="integer">
             <annotation>
-              <documentation>Angir antall rør i kummen som eies av andre aktører enn BYM. Oppgis som heltall. Informasjon om rørfarge og eier registreres under objektet «trekkerør».</documentation>
+              <documentation>Antall eksterne rør: Angir antall rør i kummen som eies av andre aktører enn BYM. Oppgis som heltall. Informasjon om rørfarge og eier registreres under objektet «trekkerør».</documentation>
             </annotation>
           </element>
         </sequence>
@@ -1596,18 +1593,18 @@ Trasèen registreres som en linjegeometri langs senter av grøft eller kanal, ua
   </complexType>
   <complexType name="TrekkekumPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Trekkekum" />
+      <element ref="ldb:Trekkekum" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
   </complexType>
-  <simpleType name="TrekkekumKategoriType">
+  <simpleType name="TrekkekumFormType">
     <annotation>
       <documentation>Angir kummens form, for eksempel rund, kvadratisk eller Ågekorskum. Verdien velges fra kodelisten Kumformtype.</documentation>
     </annotation>
-    <union memberTypes="bymlk:TrekkekumKategoriEnumerationType bymlk:TrekkekumKategoriOtherType" />
+    <union memberTypes="ldb:TrekkekumFormEnumerationType ldb:TrekkekumFormOtherType" />
   </simpleType>
-  <simpleType name="TrekkekumKategoriEnumerationType">
+  <simpleType name="TrekkekumFormEnumerationType">
     <annotation>
       <documentation>Angir kummens form, for eksempel rund, kvadratisk eller Ågekorskum. Verdien velges fra kodelisten Kumformtype.</documentation>
     </annotation>
@@ -1615,100 +1612,21 @@ Trasèen registreres som en linjegeometri langs senter av grøft eller kanal, ua
       <enumeration value="kvadratisk" />
       <enumeration value="rektangulaer" />
       <enumeration value="sarkofag" />
-      <enumeration value="sirkelforma" />
+      <enumeration value="sirkelformet" />
       <enumeration value="aagekorskum" />
       <enumeration value="annet" />
     </restriction>
   </simpleType>
-  <simpleType name="TrekkekumKategoriOtherType">
+  <simpleType name="TrekkekumFormOtherType">
     <restriction base="string">
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="TrekkekumRamme" substitutionGroup="gml:AbstractFeature" type="bymlk:TrekkekumRammeType">
-    <annotation>
-      <documentation>Trekkekumramme representerer ramme og lokk tilknyttet en trekkekum. Objektet beskriver den synlige delen av kummen i terrengnivå, inkludert ramme og lokk/rister. 
-Kumrammen registreres med polygongeometri som representerer omriss av topp kumramme i horisontalplanet. Ulike ramme- og lokktyper registreres som egne egenskaper.</documentation>
-    </annotation>
-  </element>
-  <complexType name="TrekkekumRammeType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="lokktype" type="bymlk:TrekkekumlokkTypeType">
-            <annotation>
-              <documentation>Angir formtype på kumlokk eller rist, for eksempel rund, kvadratisk eller delt. Verdien velges fra kodeliste.</documentation>
-              <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_TrekkekumlokkType.gml</defaultCodeSpace>
-              </appinfo>
-            </annotation>
-          </element>
-          <element name="rammeform" type="bymlk:TrekkekumrammeFormType">
-            <annotation>
-              <documentation>Angir form på kumrammen, for eksempel oval, kvadratisk eller TK1/TK2-ramme. Verdien velges fra kodeliste.</documentation>
-              <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_TrekkekumrammeForm.gml</defaultCodeSpace>
-              </appinfo>
-            </annotation>
-          </element>
-          <element name="omriss" type="bymlk:PolygongeometriPropertyType">
-            <annotation>
-              <documentation>Flategeometri som representerer den totale fysiske utstrekningen av kumlokkrammen i horisontalplanet. Inkluderer posisjonskvalitet.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="navn" type="string">
-            <annotation>
-              <documentation>Navn gitt til objektet i prosjekteringsgrunnlaget (IN-tegninger), for eksempel «BYM-01» eller «KM-01».</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="uuid" type="string">
-            <annotation>
-              <documentation>Universell unik identifikator: Universell unik identifikator (GUID) for objektet. Verdien genereres automatisk og sikrer global entydighet på tvers av systemer og databaser. Brukes til å koble objekter på tvers av datasett og forvaltningssystemer, og endres ikke selv om andre egenskaper ved objektet oppdateres.</documentation>
-            </annotation>
-          </element>
-          <element name="bredde" type="double">
-            <annotation>
-              <documentation>Objektets visuelle bredde i kart, oppgitt i meter. Brukes til å styre symbolbredde.</documentation>
-            </annotation>
-          </element>
-          <element name="diameter" type="double">
-            <annotation>
-              <documentation>Brukes ved sirkulær visning for å angi diameter i meter.</documentation>
-            </annotation>
-          </element>
-          <element name="lengde" type="double">
-            <annotation>
-              <documentation>Objektets visuelle lengde i kart, oppgitt i meter. Brukes til å skalere symboler i lengderetning.</documentation>
-            </annotation>
-          </element>
-          <element name="høyde" type="double">
-            <annotation>
-              <documentation>Objektets visuelle dybde eller høyde i vertikal retning, oppgitt i meter. Brukes til å representere tykkelse eller vertikal utstrekning i symbolisering.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="merknad" type="string" />
-          <element minOccurs="0" name="rotasjon" type="double">
-            <annotation>
-              <documentation>Rotasjonsvinkel i kartvisning, angitt som matematisk vinkel i grader (mot klokken fra x-aksen). Brukes til å vri symbolet i kartet.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="tilknyttetKum" type="bymlk:TrekkekumPropertyType" />
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="TrekkekumRammePropertyType">
-    <sequence minOccurs="0">
-      <element ref="bymlk:TrekkekumRamme" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
   <simpleType name="TrekkekumlokkTypeType">
     <annotation>
       <documentation>Angir formtype på kumlokk eller rist, for eksempel rund, kvadratisk eller delt. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:TrekkekumlokkTypeEnumerationType bymlk:TrekkekumlokkTypeOtherType" />
+    <union memberTypes="ldb:TrekkekumlokkTypeEnumerationType ldb:TrekkekumlokkTypeOtherType" />
   </simpleType>
   <simpleType name="TrekkekumlokkTypeEnumerationType">
     <annotation>
@@ -1735,7 +1653,7 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
           <documentation>Kumlokk for stolpe, som er plassert sentrisk i kum. Brukes for signalanlegg</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="sirkelforma">
+      <enumeration value="sirkelformet">
         <annotation>
           <documentation>Kumlokk med rund form.</documentation>
         </annotation>
@@ -1752,11 +1670,85 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
+  <element name="Trekkekumramme" substitutionGroup="gml:AbstractFeature" type="ldb:TrekkekumrammeType">
+    <annotation>
+      <documentation>Trekkekumramme representerer ramme og lokk tilknyttet en trekkekum. Objektet beskriver den synlige delen av kummen i terrengnivå, inkludert ramme og lokk/rister. 
+Kumrammen registreres med polygongeometri som representerer omriss av topp kumramme i horisontalplanet. Ulike ramme- og lokktyper registreres som egne egenskaper.</documentation>
+    </annotation>
+  </element>
+  <complexType name="TrekkekumrammeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="lokktype" type="ldb:TrekkekumlokkTypeType">
+            <annotation>
+              <documentation>Kumlokk: Angir formtype på kumlokk eller rist, for eksempel rund, kvadratisk eller delt. Verdien velges fra kodeliste.</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumlokkType.gml</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="trekkekumrammeform" type="ldb:TrekkekumrammeFormType">
+            <annotation>
+              <documentation>Kumrammeform: Angir form på kumrammen, for eksempel oval, kvadratisk eller TK1/TK2-ramme. Verdien velges fra kodeliste.</documentation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumrammeForm.gml</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="omriss" type="ldb:PolygongeometriPropertyType">
+            <annotation>
+              <documentation>Omriss: Flategeometri som representerer den totale fysiske utstrekningen av kumlokkrammen i horisontalplanet. Inkluderer posisjonskvalitet.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="navn" type="string">
+            <annotation>
+              <documentation>Navn: Navn gitt til objektet i prosjekteringsgrunnlaget (IN-tegninger), for eksempel «BYM-01» eller «KM-01».</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="uuid" type="string">
+            <annotation>
+              <documentation>Objekt-ID: Universell unik identifikator (GUID) for objektet. Verdien genereres automatisk og sikrer global entydighet på tvers av systemer og databaser. Brukes til å koble objekter på tvers av datasett og forvaltningssystemer, og endres ikke selv om andre egenskaper ved objektet oppdateres.</documentation>
+            </annotation>
+          </element>
+          <element name="bredde" type="double">
+            <annotation>
+              <documentation>Bredde: Objektets visuelle bredde i kart, oppgitt i meter. Brukes til å styre symbolbredde.</documentation>
+            </annotation>
+          </element>
+          <element name="diameter" type="double">
+            <annotation>
+              <documentation>Diameter: Brukes ved sirkulær visning for å angi diameter i meter.</documentation>
+            </annotation>
+          </element>
+          <element name="lengde" type="double">
+            <annotation>
+              <documentation>Lengde: Objektets visuelle lengde i kart, oppgitt i meter. Brukes til å skalere symboler i lengderetning.</documentation>
+            </annotation>
+          </element>
+          <element name="høyde" type="double">
+            <annotation>
+              <documentation>Høyde: Objektets visuelle dybde eller høyde i vertikal retning, oppgitt i meter. Brukes til å representere tykkelse eller vertikal utstrekning i symbolisering.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="merknad" type="string" />
+          <element minOccurs="0" name="tilknyttetKum" type="ldb:TrekkekumPropertyType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TrekkekumrammePropertyType">
+    <sequence minOccurs="0">
+      <element ref="ldb:Trekkekumramme" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
+  </complexType>
   <simpleType name="TrekkekumrammeFormType">
     <annotation>
       <documentation>Angir form på kumrammen, for eksempel oval, kvadratisk eller TK1/TK2-ramme. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:TrekkekumrammeFormEnumerationType bymlk:TrekkekumrammeFormOtherType" />
+    <union memberTypes="ldb:TrekkekumrammeFormEnumerationType ldb:TrekkekumrammeFormOtherType" />
   </simpleType>
   <simpleType name="TrekkekumrammeFormEnumerationType">
     <annotation>
@@ -1778,7 +1770,7 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
           <documentation>Rektangulær kumramme</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="sirkelforma">
+      <enumeration value="sirkelformet">
         <annotation>
           <documentation>Sirkelformet / rund kumramme.</documentation>
         </annotation>
@@ -1800,7 +1792,7 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
       <pattern value="other: \w{2,}" />
     </restriction>
   </simpleType>
-  <element name="Trekkerør" substitutionGroup="bymlk:Fremfoeringslinje" type="bymlk:TrekkerørType">
+  <element name="Trekkerør" substitutionGroup="ldb:Fremføringslinje" type="ldb:TrekkerørType">
     <annotation>
       <documentation>Alle nye trekkerør som etableres for BYM skal registreres. Primært skal ledningsdatabasen dokumentere BYM sine oransje trekkerør.
 Trekkerør registreres som egne objekter med linjegeometri som representerer plasseringen til hvert enkelt rør i en trasè. Tilhørende informasjon om eier, rørfarge og dimensjon registreres på hvert trekkerør.</documentation>
@@ -1808,30 +1800,30 @@ Trekkerør registreres som egne objekter med linjegeometri som representerer pla
   </element>
   <complexType name="TrekkerørType">
     <complexContent>
-      <extension base="bymlk:FremfoeringslinjeType">
+      <extension base="ldb:FremføringslinjeType">
         <sequence>
-          <element name="diameter" type="bymlk:TrekkerørDiameterType">
+          <element name="diameter" type="ldb:TrekkerørDiameterType">
             <annotation>
-              <documentation>Angir dimensjon på trekkerøret. Verdien velges fra kodeliste.</documentation>
+              <documentation>Diameter (mm): Angir dimensjon på trekkerøret. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_TrekkerørDiameter.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørDiameter.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element minOccurs="0" name="merking" type="bymlk:MerketypeType">
+          <element minOccurs="0" name="merking" type="ldb:MerketypeType">
             <annotation>
-              <documentation>Angir hvordan objektet (kum, rør eller trase) er fysisk merket i terrenget. Verdien velges fra kodelisten Merketype._x000D_
+              <documentation>Merking: Angir hvordan objektet (kum, rør eller trase) er fysisk merket i terrenget. Verdien velges fra kodelisten Merketype._x000D_
 Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilken type merking som er benyttet, for eksempel merkeplate eller maling/spraymerking. Informasjonen brukes til drift, kontroll og dokumentasjon.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_Merketype.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
-          <element name="rørfarge" type="bymlk:TrekkerørFargeType">
+          <element name="rørfarge" type="ldb:TrekkerørFargeType">
             <annotation>
-              <documentation>Angir farge på trekkerøret. Verdien velges fra kodeliste og brukes til å identifisere eier og/eller funksjon.</documentation>
+              <documentation>Rørfarge: Angir farge på trekkerøret. Verdien velges fra kodeliste og brukes til å identifisere eier og/eller funksjon.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://bym.oslo.no/codelists/ledningskartet/1.0/bymlk_TrekkerørFarge.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørFarge.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1841,7 +1833,7 @@ Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilke
   </complexType>
   <complexType name="TrekkerørPropertyType">
     <sequence minOccurs="0">
-      <element ref="bymlk:Trekkerør" />
+      <element ref="ldb:Trekkerør" />
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup" />
     <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1850,7 +1842,7 @@ Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilke
     <annotation>
       <documentation>Angir dimensjon på trekkerøret. Verdien velges fra kodeliste.</documentation>
     </annotation>
-    <union memberTypes="bymlk:TrekkerørDiameterEnumerationType bymlk:TrekkerørDiameterOtherType" />
+    <union memberTypes="ldb:TrekkerørDiameterEnumerationType ldb:TrekkerørDiameterOtherType" />
   </simpleType>
   <simpleType name="TrekkerørDiameterEnumerationType">
     <annotation>
@@ -1883,7 +1875,7 @@ Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilke
     <annotation>
       <documentation>Angir farge på trekkerøret. Verdien velges fra kodeliste og brukes til å identifisere eier og/eller funksjon.</documentation>
     </annotation>
-    <union memberTypes="bymlk:TrekkerørFargeEnumerationType bymlk:TrekkerørFargeOtherType" />
+    <union memberTypes="ldb:TrekkerørFargeEnumerationType ldb:TrekkerørFargeOtherType" />
   </simpleType>
   <simpleType name="TrekkerørFargeEnumerationType">
     <annotation>
