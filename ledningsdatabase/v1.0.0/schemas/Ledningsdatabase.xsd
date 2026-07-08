@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ldb="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" elementFormDefault="qualified" targetNamespace="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" version="1.0.0">
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="https://www.opengis.net/gml/3.2" xmlns:ldb="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" elementFormDefault="qualified" targetNamespace="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" version="1.0.0">
+  <import namespace="https://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+  <!--XML Schema document created by ShapeChange - https://shapechange.net/-->
   <element name="AndreTermineringspunkt" substitutionGroup="ldb:Kopling" type="ldb:AndreTermineringspunktType">
     <annotation>
       <documentation>Andre termineringspunkt er en samlebetegnelse for fysiske objekter eller installasjoner der BYM terminerer rør, men hvor objektet ikke modelleres som kum eller fundament. Objekttypen benyttes typisk for installasjoner tilhørende andre infrastruktureiere, særlig Sporveien.
@@ -17,7 +17,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
             <annotation>
               <documentation>Termineringspunkt kategori: Angir hvilken type annet termineringspunkt objektet representerer, for eksempel minuskasse, detektorsløyfe, infoskjerm eller billettautomat. Verdien velges fra kodelisten `AndreTermineringspunktType`.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_AndreTermineringspunktKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_AndreTermineringspunktKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -96,7 +96,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
           <element name="fundamenttype" type="ldb:BomFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_BomFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_BomFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -151,7 +151,7 @@ AndreTermineringspunkt registreres som punktgeometri, målt som topp senterpunkt
           <element name="kategori" type="ldb:DetektorsløyfeKategoriType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_DetektorsløyfeKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_DetektorsløyfeKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -486,7 +486,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
           <element name="kategori" type="ldb:JordelektrodeKategoriType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordelektrodeKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordelektrodeKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -557,7 +557,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
           <element name="jordlederType" type="ldb:JordlederTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -565,7 +565,7 @@ Merknad: Mange ledninger er målt på lukket grøft</documentation>
           <element name="jordlederTverrsnitt" type="ldb:JordlederTverrsnittType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederTverrsnitt.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_JordlederTverrsnitt.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -743,7 +743,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
           <element name="fundamenttype" type="ldb:LadestolpeFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_LadestolpeFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_LadestolpeFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -818,7 +818,7 @@ Geometrien for kulvert representeres som en polygon som viser det fysiske omriss
           <element name="fundamenttype" type="ldb:MastStolpeFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MastStolpeFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MastStolpeFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1114,7 +1114,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
             <annotation>
               <documentation>Fysisk plassering: Angir hvor et objekt (feks. kum, fundament, detektor eller annet termineringspunkt) er fysisk plassert i terrenget eller infrastrukturen.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_FysiskPlassering.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_FysiskPlassering.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1126,7 +1126,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
           <element maxOccurs="unbounded" minOccurs="0" name="trase" type="ldb:TrasePropertyType">
             <annotation>
               <appinfo>
-                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">ldb:komponenter</reversePropertyName>
+                <reversePropertyName xmlns="https://www.opengis.net/gml/3.2">ldb:komponenter</reversePropertyName>
               </appinfo>
             </annotation>
           </element>
@@ -1149,7 +1149,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
           <element name="fundamenttype" type="ldb:PAutomatFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PAutomatFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PAutomatFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1229,7 +1229,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
         <annotation>
           <documentation>Målemetode: Metode eller instrument brukt for innmåling av horisontal posisjon (X/Y). Velges fra standardisert kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Målemetode.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Målemetode.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1247,7 +1247,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
         <annotation>
           <documentation>Målemetode høyde: Metode eller instrument brukt for måling av høyde (Z). Velges fra egen kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MålemetodeHøyde.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_MålemetodeHøyde.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1255,7 +1255,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
         <annotation>
           <documentation>Høydereferanse: Angir hvilken del av objektet høydeverdien refererer til (f.eks. topp, bunn eller senter). Velges fra kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Høydereferanse.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Høydereferanse.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1263,7 +1263,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
         <annotation>
           <documentation>Innmålingsstatus: Angir hvordan geometrien er etablert (innmålt, ikke innmålt eller importert) og gir informasjon om datakvalitet og opprinnelse. Velges fra kodeliste.</documentation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_InnmålingsStatus.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_InnmålingsStatus.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1275,7 +1275,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
       <element name="synbarhet" type="ldb:SynbarhetType">
         <annotation>
           <appinfo>
-            <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Synbarhet.gml</defaultCodeSpace>
+            <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Synbarhet.gml</defaultCodeSpace>
           </appinfo>
         </annotation>
       </element>
@@ -1294,7 +1294,7 @@ Merknad: Posisjonskvalitet er ikke konform med kvalitetsmodellen i ISO 19157:201
           <element name="fundamenttype" type="ldb:PullerterHevSenkFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PullerterHevSenkFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_PullerterHevSenkFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1371,14 +1371,14 @@ Punktet (GM_Point) representerer den romlige plasseringen av objektet – som fo
           <element name="fundamenttype" type="ldb:SkapFundamentTypeType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
           <element name="kategori" type="ldb:SkapFundamentKategoriType">
             <annotation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentKategori.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_SkapFundamentKategori.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1532,7 +1532,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
           <element maxOccurs="unbounded" minOccurs="0" name="komponenter" type="ldb:NettverkskomponentPropertyType">
             <annotation>
               <appinfo>
-                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">ldb:trase</reversePropertyName>
+                <reversePropertyName xmlns="https://www.opengis.net/gml/3.2">ldb:trase</reversePropertyName>
               </appinfo>
             </annotation>
           </element>
@@ -1565,7 +1565,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
             <annotation>
               <documentation>Kumform: Angir kummens form, for eksempel rund, kvadratisk eller Ågekorskum. Verdien velges fra kodelisten TrekkekumFrom.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumForm.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumForm.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1573,7 +1573,7 @@ Attributtet er ikke ment for plassering, merknader eller annen beskrivende infor
             <annotation>
               <documentation>Merking: Angir hvordan kummen er fysisk merket innvendig. Verdien «Ingen» betyr at objektet ikke er merket. Øvrige verdier beskriver type merking, for eksempel merkeplate eller maling/spraymerking. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1684,7 +1684,7 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
             <annotation>
               <documentation>Kumlokk: Angir formtype på kumlokk eller rist, for eksempel rund, kvadratisk eller delt. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumlokkType.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumlokkType.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1692,7 +1692,7 @@ Kumrammen registreres med polygongeometri som representerer omriss av topp kumra
             <annotation>
               <documentation>Kumrammeform: Angir form på kumrammen, for eksempel oval, kvadratisk eller TK1/TK2-ramme. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumrammeForm.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkekumrammeForm.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1806,7 +1806,7 @@ Trekkerør registreres som egne objekter med linjegeometri som representerer pla
             <annotation>
               <documentation>Diameter (mm): Angir dimensjon på trekkerøret. Verdien velges fra kodeliste.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørDiameter.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørDiameter.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1815,7 +1815,7 @@ Trekkerør registreres som egne objekter med linjegeometri som representerer pla
               <documentation>Merking: Angir hvordan objektet (kum, rør eller trase) er fysisk merket i terrenget. Verdien velges fra kodelisten Merketype._x000D_
 Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilken type merking som er benyttet, for eksempel merkeplate eller maling/spraymerking. Informasjonen brukes til drift, kontroll og dokumentasjon.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_Merketype.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
@@ -1823,7 +1823,7 @@ Verdien Ingen betyr at objektet ikke er merket. Øvrige verdier beskriver hvilke
             <annotation>
               <documentation>Rørfarge: Angir farge på trekkerøret. Verdien velges fra kodeliste og brukes til å identifisere eier og/eller funksjon.</documentation>
               <appinfo>
-                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørFarge.gml</defaultCodeSpace>
+                <defaultCodeSpace xmlns="https://www.opengis.net/gml/3.2">https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/codelists/ldb_TrekkerørFarge.gml</defaultCodeSpace>
               </appinfo>
             </annotation>
           </element>
