@@ -13,7 +13,6 @@ The repository is currently used to share XML Schema Definitions (XSD) and GML e
 
 ```text
 ledningsdatabase/
-  schemas/
-    v1.0.0/
-      xsd/
-      examples/
+  v1.0.0/
+    schemas/
+    codelists/
