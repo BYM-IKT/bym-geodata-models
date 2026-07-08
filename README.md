@@ -7,8 +7,9 @@ The repository is currently used to share XML Schema Definitions (XSD) and GML e
 ## Current content
 
 - Ledningsdatabase schemas
+- GML code lists
 - GML example files
-
+  
 ## Structure
 
 ```text
@@ -16,3 +17,4 @@ ledningsdatabase/
   v1.0.0/
     schemas/
     codelists/
+    examples/
