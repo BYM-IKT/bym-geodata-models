@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ldb="https://geodata.bymoslo.no/schema/ledningsdatabase" elementFormDefault="qualified" targetNamespace="https://geodata.bymoslo.no/schema/ledningsdatabase" version="1.0.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ldb="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" elementFormDefault="qualified" targetNamespace="https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas" version="1.0.0">
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="AndreTermineringspunkt" substitutionGroup="ldb:Kopling" type="ldb:AndreTermineringspunktType">
