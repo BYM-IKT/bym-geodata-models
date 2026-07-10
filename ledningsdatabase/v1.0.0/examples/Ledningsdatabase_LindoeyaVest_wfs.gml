@@ -1,0 +1,1156 @@
+<wfs:FeatureCollection xmlns:fes="http://www.opengis.net/fes/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ldb="https://geodata.bymoslo.no/schema/ledningsdatabase" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timeStamp="2026-07-10T12:40:44.6248612" numberMatched="44" numberReturned="44" xsi:schemaLocation="https://geodata.bymoslo.no/schema/ledningsdatabase https://raw.githubusercontent.com/BYM-IKT/bym-geodata-models/refs/heads/master/ledningsdatabase/v1.0.0/schemas/Ledningsdatabase_wfs.xsd">
+	<wfs:boundedBy>
+		<gml:Envelope srsName="EPSG:5972" srsDimension="3">
+			<gml:lowerCorner>595502.79760000017 6640335.9956999999 0</gml:lowerCorner>
+			<gml:upperCorner>595512.37110000011 6640368.3600999992 0</gml:upperCorner>
+		</gml:Envelope>
+	</wfs:boundedBy>
+	<wfs:member>
+		<ldb:Kanal gml:id="ac9f720a-4666-42a6-941c-ed7196364bd8">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595503.7526000002 6640341.896500001 0 595504.0499999998 6640342.5186 0 595507.3086000001 6640341.6521000005 0 595507.2449000003 6640340.983999999 0 595503.7526000002 6640341.896500001 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Kanal>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Kanal gml:id="a934df20-ecdb-4505-afdc-6374463963e9">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595507.8947999999 6640365.137599999 0 595511.6728999997 6640363.8518 0 595511.4792 6640363.3961 0 595507.6945000002 6640364.6664 0 595507.8947999999 6640365.137599999 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Kanal>
+	</wfs:member>
+	<wfs:member>
+		<ldb:MastStolpe gml:id="bed5ae8a-b47c-4e2b-98b3-d382dfda20cf">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>109</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595511.1494000005 6640362.803200001 0 595511.1494000005 6640362.203199999 0 595510.5493999999 6640362.203199999 0 595510.5493999999 6640362.803200001 0 595511.1494000005 6640362.803200001 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:fundamenttype>annet</ldb:fundamenttype>
+		</ldb:MastStolpe>
+	</wfs:member>
+	<wfs:member>
+		<ldb:MastStolpe gml:id="c35fc44b-33c9-4f13-b594-67082ab34c0a">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>109</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595507.7684000004 6640346.1756 0 595507.7684000004 6640345.5756 0 595507.1683999998 6640345.5756 0 595507.1683999998 6640346.1756 0 595507.7684000004 6640346.1756 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:fundamenttype>annet</ldb:fundamenttype>
+		</ldb:MastStolpe>
+	</wfs:member>
+	<wfs:member>
+		<ldb:MastStolpe gml:id="a32180a0-9c74-4dea-a853-94df404cfb3c">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>109</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595510.4395000003 6640358.072799999 0 595510.4395000003 6640357.4728 0 595509.8394999998 6640357.4728 0 595509.8394999998 6640358.072799999 0 595510.4395000003 6640358.072799999 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:fundamenttype>annet</ldb:fundamenttype>
+		</ldb:MastStolpe>
+	</wfs:member>
+	<wfs:member>
+		<ldb:MastStolpe gml:id="a4d2cfe1-6eff-4681-9d1e-6526f7f4022b">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>109</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595508.8866999997 6640351.802300001 0 595508.8866999997 6640351.202299999 0 595508.2867 6640351.202299999 0 595508.2867 6640351.802300001 0 595508.8866999997 6640351.802300001 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:fundamenttype>annet</ldb:fundamenttype>
+		</ldb:MastStolpe>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="c71a1bd3-3398-47bf-bcc7-3f146f0aca83">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7035999997 6640342.2707 0 595507.8602999998 6640343.1493 0 595508.3157000002 6640345.2203 0 595507.7649999997 6640345.591 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="a6faecc7-c69f-43bc-b298-ccadd78f454c">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.5431000004 6640365.405200001 0 595507.7181000002 6640365.8518 0 595507.5779999997 6640366.559699999 0 595506.9940999998 6640367.5155 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>1</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="e191409e-9737-40e6-9489-80cab667c21e">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7434999999 6640340.7105 0 595507.5425000004 6640339.230699999 0 595507.6068000002 6640338.1624 0 595507.7695000004 6640336.897700001 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>1</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="a5bf21c5-07e6-4c18-87d6-a3db60a0450b">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595503.9007000001 6640342.206499999 0 595507.2732999995 6640341.2969 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>3</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="aa447368-934f-4df4-8acb-24ad6799215c">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595511.1494000005 6640362.203199999 0 595511.3885000004 6640362.215600001 0 595511.5597000001 6640363.2893 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="aacc37a5-3330-4371-beef-a58197c9d638">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595510.4375 6640357.4871 0 595510.7300000004 6640357.5066 0 595510.8704000004 6640358.283500001 0 595511.0442000004 6640359.6949000005 0 595511.3770000003 6640362.0615 0 595511.1494000005 6640362.203199999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="a6726c55-52ed-4f18-8b07-857b76e18093">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.9013999999 6640342.252800001 0 595509.8962000003 6640351.368899999 0 595511.2038000003 6640358.204 0 595511.7867999999 6640363.1927000005 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="ac3cc8d1-71a5-48c9-9750-671ad0254dc2">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595508.8875000002 6640351.204600001 0 595509.5527999997 6640351.328 0 595510.6727999998 6640357.2651 0 595510.4375 6640357.4871 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="a359a855-acce-4bde-b026-497c22c17a5f">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7894000001 6640364.889599999 0 595511.5548 6640363.573799999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>1</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trase gml:id="aeccea13-bfbb-4d8f-9474-7b0fbc9779af">
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7649999997 6640345.591 0 595508.3907000003 6640345.7618 0 595509.4291000003 6640350.8781 0 595508.8875000002 6640351.204600001 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trase>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekum gml:id="e9bdf6b7-93f9-4e21-9c2c-dd9a3ce32f91">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>700</ldb:bredde>
+			<ldb:lengde>700</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>67</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595507.0192999998 6640364.8673 0 595507.2931000004 6640365.511499999 0 595507.9373000003 6640365.237600001 0 595507.6634999998 6640364.5934 0 595507.0192999998 6640364.8673 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:trekkekumform>kvadratisk</ldb:trekkekumform>
+			<ldb:merking>annet</ldb:merking>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trekkekum>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekum gml:id="a535305d-44d5-48fd-9e26-7b0602e67537">
+			<ldb:navn>TKS5</ldb:navn>
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>900</ldb:bredde>
+			<ldb:lengde>1600</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:rotasjon>153</ldb:rotasjon>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595503.4669000003 6640343.323899999 0 595504.2521000002 6640342.9486 0 595503.5828 6640341.5484 0 595502.7976000002 6640341.923699999 0 595503.4669000003 6640343.323899999 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:trekkekumform>rektangulaer</ldb:trekkekumform>
+			<ldb:merking>annet</ldb:merking>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trekkekum>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekum gml:id="a55cca52-f99a-44cd-928d-09322e3db2e9">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+			<ldb:diameter>900</ldb:diameter>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595508.2663000003 6640336.445699999 0 595508.2646000003 6640336.4065000005 0 595508.2594999997 6640336.3675999995 0 595508.2510000002 6640336.329299999 0 595508.2391999997 6640336.2918 0 595508.2242 6640336.2556 0 595508.2061000001 6640336.2206999995 0 595508.1849999996 6640336.1876 0 595508.1611000001 6640336.1565000005 0 595508.1344999997 6640336.1274999995 0 595508.1056000004 6640336.101 0 595508.0744000003 6640336.077099999 0 595508.0412999997 6640336.056 0 595508.0065000001 6640336.037900001 0 595507.9702000003 6640336.0229 0 595507.9327999996 6640336.0111 0 595507.8945000004 6640336.002599999 0 595507.8556000004 6640335.997400001 0 595507.8163000001 6640335.9957 0 595507.7770999996 6640335.997400001 0 595507.7381999996 6640336.002599999 0 595507.6999000004 6640336.0111 0 595507.6623999998 6640336.0229 0 595507.6261999998 6640336.037900001 0 595507.5913000004 6640336.056 0 595507.5581999999 6640336.077099999 0 595507.5270999996 6640336.101 0 595507.4981000004 6640336.1274999995 0 595507.4715999998 6640336.1565000005 0 595507.4477000004 6640336.1876 0 595507.4265999999 6640336.2206999995 0 595507.4084999999 6640336.2556 0 595507.3935000002 6640336.2918 0 595507.3816999998 6640336.329299999 0 595507.3732000003 6640336.3675999995 0 595507.3680999996 6640336.4065000005 0 595507.3662999999 6640336.445699999 0 595507.3680999996 6640336.484999999 0 595507.3732000003 6640336.5239 0 595507.3816999998 6640336.5622000005 0 595507.3935000002 6640336.5996 0 595507.4084999999 6640336.6359 0 595507.4265999999 6640336.670700001 0 595507.4477000004 6640336.7038 0 595507.4715999998 6640336.734999999 0 595507.4981000004 6640336.763900001 0 595507.5270999996 6640336.7905 0 595507.5581999999 6640336.814300001 0 595507.5913000004 6640336.8354 0 595507.6261999998 6640336.853599999 0 595507.6623999998 6640336.8686 0 595507.6999000004 6640336.8804 0 595507.7381999996 6640336.888900001 0 595507.7770999996 6640336.893999999 0 595507.8163000001 6640336.8957 0 595507.8556000004 6640336.893999999 0 595507.8945000004 6640336.888900001 0 595507.9327999996 6640336.8804 0 595507.9702000003 6640336.8686 0 595508.0065000001 6640336.853599999 0 595508.0412999997 6640336.8354 0 595508.0744000003 6640336.814300001 0 595508.1056000004 6640336.7905 0 595508.1344999997 6640336.763900001 0 595508.1611000001 6640336.734999999 0 595508.1849999996 6640336.7038 0 595508.2061000001 6640336.670700001 0 595508.2242 6640336.6359 0 595508.2391999997 6640336.5996 0 595508.2510000002 6640336.5622000005 0 595508.2594999997 6640336.5239 0 595508.2646000003 6640336.484999999 0 595508.2663000003 6640336.445699999 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:trekkekumform>sirkelformet</ldb:trekkekumform>
+			<ldb:merking>annet</ldb:merking>
+			<ldb:antallRørEiesAvBYM>0</ldb:antallRørEiesAvBYM>
+			<ldb:antallRørEiesAvAndre>0</ldb:antallRørEiesAvAndre>
+		</ldb:Trekkekum>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekumramme gml:id="a5ba8851-f11c-4c64-a434-909862a6eb42">
+			<ldb:lokktype>kvadratisk</ldb:lokktype>
+			<ldb:trekkekumrammeform>tk1</ldb:trekkekumrammeform>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595511.4530999996 6640363.3346 0 595511.7269000001 6640363.978800001 0 595512.3711000001 6640363.7049 0 595512.0972999996 6640363.060699999 0 595511.4530999996 6640363.3346 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:bredde>700</ldb:bredde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:lengde>700</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+		</ldb:Trekkekumramme>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekumramme gml:id="a70a8441-a5f1-458e-83b5-63f5f5648c99">
+			<ldb:lokktype>sirkelformet</ldb:lokktype>
+			<ldb:trekkekumrammeform>annet</ldb:trekkekumrammeform>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595507.2285000002 6640367.9101 0 595507.2268000003 6640367.8708999995 0 595507.2216999996 6640367.832 0 595507.2132000001 6640367.7937 0 595507.2013999997 6640367.756200001 0 595507.1864 6640367.720000001 0 595507.1683 6640367.6851 0 595507.1471999995 6640367.652000001 0 595507.1233000001 6640367.6208999995 0 595507.0966999996 6640367.5919 0 595507.0678000003 6640367.565400001 0 595507.0366000002 6640367.5415 0 595507.0034999996 6640367.520400001 0 595506.9687000001 6640367.5023 0 595506.9324000003 6640367.487299999 0 595506.8949999996 6640367.475500001 0 595506.8567000004 6640367.467 0 595506.8178000003 6640367.4618 0 595506.7785 6640367.460100001 0 595506.7392999995 6640367.4618 0 595506.7004000004 6640367.467 0 595506.6621000003 6640367.475500001 0 595506.6245999997 6640367.487299999 0 595506.5883999998 6640367.5023 0 595506.5535000004 6640367.520400001 0 595506.5203999998 6640367.5415 0 595506.4892999995 6640367.565400001 0 595506.4603000004 6640367.5919 0 595506.4337999998 6640367.6208999995 0 595506.4099000003 6640367.652000001 0 595506.3887999998 6640367.6851 0 595506.3706999999 6640367.720000001 0 595506.3557000002 6640367.756200001 0 595506.3438999997 6640367.7937 0 595506.3354000002 6640367.832 0 595506.3302999996 6640367.8708999995 0 595506.3284999998 6640367.9101 0 595506.3302999996 6640367.9494 0 595506.3354000002 6640367.988299999 0 595506.3438999997 6640368.0265999995 0 595506.3557000002 6640368.063999999 0 595506.3706999999 6640368.100299999 0 595506.3887999998 6640368.1351 0 595506.4099000003 6640368.168199999 0 595506.4337999998 6640368.1994 0 595506.4603000004 6640368.2283 0 595506.4892999995 6640368.254899999 0 595506.5203999998 6640368.2787 0 595506.5535000004 6640368.299799999 0 595506.5883999998 6640368.318 0 595506.6245999997 6640368.333000001 0 595506.6621000003 6640368.344799999 0 595506.7004000004 6640368.3533 0 595506.7392999995 6640368.3584 0 595506.7785 6640368.360099999 0 595506.8178000003 6640368.3584 0 595506.8567000004 6640368.3533 0 595506.8949999996 6640368.344799999 0 595506.9324000003 6640368.333000001 0 595506.9687000001 6640368.318 0 595507.0034999996 6640368.299799999 0 595507.0366000002 6640368.2787 0 595507.0678000003 6640368.254899999 0 595507.0966999996 6640368.2283 0 595507.1233000001 6640368.1994 0 595507.1471999995 6640368.168199999 0 595507.1683 6640368.1351 0 595507.1864 6640368.100299999 0 595507.2013999997 6640368.063999999 0 595507.2132000001 6640368.0265999995 0 595507.2216999996 6640367.988299999 0 595507.2268000003 6640367.9494 0 595507.2285000002 6640367.9101 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:bredde>0</ldb:bredde>
+			<ldb:diameter>900</ldb:diameter>
+			<ldb:lengde>0</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+		</ldb:Trekkekumramme>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkekumramme gml:id="a22d0af3-a02e-4344-a7a2-95a7f86fad02">
+			<ldb:lokktype>kvadratisk</ldb:lokktype>
+			<ldb:trekkekumrammeform>tk2</ldb:trekkekumrammeform>
+			<ldb:omriss>
+				<ldb:Polygongeometri>
+					<ldb:geometri>
+						<gml:Polygon srsDimension="3">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>595507.3674999997 6640342.3013 0 595508.2342999997 6640342.2225 0 595508.0938999997 6640340.676899999 0 595507.2271999996 6640340.7557 0 595507.3674999997 6640342.3013 0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>frihaandstegningPaaSkjerm</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>beregnet</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Polygongeometri>
+			</ldb:omriss>
+			<ldb:bredde>900</ldb:bredde>
+			<ldb:diameter>0</ldb:diameter>
+			<ldb:lengde>1600</ldb:lengde>
+			<ldb:høyde>0</ldb:høyde>
+		</ldb:Trekkekumramme>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a68db503-675e-4832-a667-299a1fc46009">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.8695 6640365.0781 0 595511.6387 6640363.771199999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="f041a051-0708-4755-a923-4fc560d69094">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.5431000004 6640365.405200001 0 595507.7181000002 6640365.8518 0 595507.6042 6640366.5174 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a1a93752-9901-4501-b6f8-91fe47258bfa">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595511.4972000001 6640363.4384 0 595507.7205999997 6640364.7278 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="ac9cc7c4-d400-4994-bc84-fe340ce7d085">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.6042 6640366.5174 0 595506.9912 6640367.506999999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a50735ba-58d2-445d-bb6d-a064baddf1de">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595510.4375 6640357.4871 0 595510.7300000004 6640357.5066 0 595510.8704000004 6640358.283500001 0 595511.3770000003 6640362.0615 0 595511.1494000005 6640362.203199999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a7d4b8f4-ed09-45f7-b78b-1e6ccce353b2">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595511.5548 6640363.573799999 0 595507.7894000001 6640364.889599999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="ac0a9d77-eda3-40eb-b82d-e1af90938c89">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.9013999999 6640342.252800001 0 595509.7302999999 6640350.5013999995 0 595511.2038000003 6640358.204 0 595511.7867999999 6640363.1927000005 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>75mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="acab885b-b275-4e59-9302-4a651ad57966">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.6124 6640340.7184 0 595507.4066000003 6640339.207800001 0 595507.4440000001 6640338.142100001 0 595507.5979000004 6640336.8587 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="fbe80dc9-282b-46f8-abdb-a3221a2e58e0">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595503.7933999998 6640341.981899999 0 595507.2511999998 6640341.053300001 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="ec3c66ff-c403-4bf8-a277-3982000ed552">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595511.1518000001 6640362.203299999 0 595511.3885000004 6640362.215600001 0 595511.5597000001 6640363.2893 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>75mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a0715f0d-3043-481f-90a4-f2af7601fc63">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595508.8875000002 6640351.204600001 0 595509.5527999997 6640351.328 0 595510.6727999998 6640357.2651 0 595510.4375 6640357.4871 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>75mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="ae1efe00-98b8-4bcc-a3d1-b274e99f7145">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.8858000003 6640340.6899 0 595507.6879000003 6640339.207800001 0 595507.7593 6640338.2709 0 595507.9424 6640336.887499999 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a3fcaa66-cb5f-4285-b44f-6d180f5a833f">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595504.0158000002 6640342.4542 0 595507.2954000002 6640341.540100001 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="ab4ae9cb-b2ca-4d52-b2ed-a096b01ea9d4">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7649999997 6640345.591 0 595508.3907000003 6640345.7618 0 595509.4291000003 6640350.8781 0 595508.8875000002 6640351.204600001 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>75mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="e556afcf-965a-4dff-87f5-2a3df4d57bce">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595507.7035999997 6640342.2707 0 595507.8602999998 6640343.1493 0 595508.3157000002 6640345.2203 0 595507.7649999997 6640345.591 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>75mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+	<wfs:member>
+		<ldb:Trekkerør gml:id="a0cb86b7-817b-454f-bde0-15269e8487c8">
+			<ldb:fysiskPlassering>annet</ldb:fysiskPlassering>
+			<ldb:linje>
+				<ldb:Linjegeometri>
+					<ldb:geometri>
+						<gml:LineString srsDimension="3">
+							<gml:posList>595503.9007000001 6640342.206499999 0 595507.2732999995 6640341.2969 0</gml:posList>
+						</gml:LineString>
+					</ldb:geometri>
+					<ldb:posisjonskvalitet>
+						<ldb:PosisjonsKvalitet>
+							<ldb:målemetode>genererteDataFraAnnenGeometri</ldb:målemetode>
+							<ldb:nøyaktighet>0</ldb:nøyaktighet>
+							<ldb:nøyaktighetHøyde>0</ldb:nøyaktighetHøyde>
+							<ldb:målemetodeHøyde>genererteDataFraAnnenGeometri</ldb:målemetodeHøyde>
+							<ldb:høydeReferanse>ukjent</ldb:høydeReferanse>
+							<ldb:innmålingsstatus>importUkjent</ldb:innmålingsstatus>
+							<ldb:innmålingsdato>2000-01-01</ldb:innmålingsdato>
+							<ldb:synbarhet>1</ldb:synbarhet>
+						</ldb:PosisjonsKvalitet>
+					</ldb:posisjonskvalitet>
+				</ldb:Linjegeometri>
+			</ldb:linje>
+			<ldb:diameter>110mm</ldb:diameter>
+			<ldb:rørfarge>oransje</ldb:rørfarge>
+		</ldb:Trekkerør>
+	</wfs:member>
+</wfs:FeatureCollection>
